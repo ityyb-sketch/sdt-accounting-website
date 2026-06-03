@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Check, Award, Heart, Wallet } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Award, Heart, Wallet } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
