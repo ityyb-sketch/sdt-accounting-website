@@ -87,7 +87,7 @@ function Services() {
               key={it.title}
               className={`reveal reveal-delay-${(i % 3) + 1} group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-sky/40 hover:shadow-elegant`}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-soft text-[oklch(0.5_0.14_245)] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-soft text-[#3E2C23] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
                 <it.icon size={18} />
               </span>
               <h3 className="mt-4 text-base font-semibold text-navy">{it.title}</h3>
@@ -139,7 +139,7 @@ function Services() {
             <path
               d="M 20 3 L 980 3"
               fill="none"
-              stroke="oklch(0.66 0.14 245 / 0.45)"
+              stroke="#3E2C2373"
               strokeWidth="2"
               strokeLinecap="round"
               strokeDasharray="6 8"
@@ -153,7 +153,7 @@ function Services() {
                 className={`step-pop d${i + 1} relative rounded-2xl border border-border bg-card p-8 shadow-card`}
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-soft ring-1 ring-sky/30">
-                  <span className="font-display text-lg font-bold text-[oklch(0.5_0.14_245)]">{s.n}</span>
+                  <span className="font-display text-lg font-bold text-[#3E2C23]">{s.n}</span>
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-navy">{s.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.body}</p>

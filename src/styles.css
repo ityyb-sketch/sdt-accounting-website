@@ -42,37 +42,39 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.26 0.03 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.26 0.03 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.26 0.03 250);
+  /* Espresso Light palette */
+  --background: #FBF9F6;
+  --foreground: #16110E;
+  --card: #FFFFFF;
+  --card-foreground: #16110E;
+  --popover: #FFFFFF;
+  --popover-foreground: #16110E;
 
-  /* Dark slate ("navy" token kept for backward compatibility) */
-  --navy: oklch(0.28 0.04 250);
-  --navy-foreground: oklch(0.99 0.003 240);
+  /* "navy" token = near-black warm text */
+  --navy: #16110E;
+  --navy-foreground: #FBF9F6;
 
-  /* Soft blue accent (replaces gold) */
-  --gold: oklch(0.66 0.14 245);
-  --gold-foreground: oklch(0.99 0.003 240);
+  /* "gold" token = espresso primary accent */
+  --gold: #3E2C23;
+  --gold-foreground: #FBF9F6;
 
-  --sky: oklch(0.72 0.11 240);
-  --sky-soft: oklch(0.96 0.025 240);
+  /* "sky" tokens = espresso accent + cream tint */
+  --sky: #3E2C23;
+  --sky-soft: #EFE7DD;
 
-  --primary: oklch(0.28 0.04 250);
-  --primary-foreground: oklch(0.99 0.003 240);
-  --secondary: oklch(0.97 0.015 240);
-  --secondary-foreground: oklch(0.28 0.04 250);
-  --muted: oklch(0.975 0.013 240);
-  --muted-foreground: oklch(0.5 0.025 250);
-  --accent: oklch(0.66 0.14 245);
-  --accent-foreground: oklch(0.99 0.003 240);
+  --primary: #3E2C23;
+  --primary-foreground: #FBF9F6;
+  --secondary: #F3EEE7;
+  --secondary-foreground: #16110E;
+  --muted: #F3EEE7;
+  --muted-foreground: #6F6258;
+  --accent: #3E2C23;
+  --accent-foreground: #FBF9F6;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0.005 240);
-  --border: oklch(0.93 0.012 240);
-  --input: oklch(0.93 0.012 240);
-  --ring: oklch(0.66 0.14 245);
+  --destructive-foreground: #FBF9F6;
+  --border: #E8DFD3;
+  --input: #E8DFD3;
+  --ring: #3E2C23;
 }
 
 @layer base {
@@ -96,20 +98,21 @@
 
 @utility gradient-hero {
   background:
-    radial-gradient(60% 80% at 85% 0%, color-mix(in oklab, var(--sky) 22%, transparent), transparent 60%),
-    radial-gradient(50% 70% at 0% 100%, color-mix(in oklab, var(--sky) 14%, transparent), transparent 60%),
-    linear-gradient(180deg, oklch(0.995 0.006 240), #ffffff);
+    radial-gradient(60% 80% at 85% 0%, color-mix(in oklab, var(--sky) 14%, transparent), transparent 60%),
+    radial-gradient(50% 70% at 0% 100%, color-mix(in oklab, var(--sky) 8%, transparent), transparent 60%),
+    linear-gradient(180deg, #FBF9F6, #FFFFFF);
 }
 
 @utility gradient-navy {
   background:
-    radial-gradient(50% 70% at 100% 0%, color-mix(in oklab, var(--sky) 35%, transparent), transparent 60%),
-    linear-gradient(135deg, var(--navy), oklch(0.22 0.04 250));
+    radial-gradient(50% 70% at 100% 0%, color-mix(in oklab, #4A352A 60%, transparent), transparent 60%),
+    linear-gradient(135deg, #3E2C23, #2A1D16);
 }
 
 @utility surface-soft {
-  background: linear-gradient(180deg, var(--sky-soft), #ffffff);
+  background: linear-gradient(180deg, var(--sky-soft), #FBF9F6);
 }
+
 
 /* Reveal-on-scroll */
 .reveal {
