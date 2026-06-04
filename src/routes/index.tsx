@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen } from "lucide-react";
+import { HeroScene } from "@/components/hero-scene";
+import { StatsStrip } from "@/components/stats-strip";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,15 +46,9 @@ function Home() {
               </Link>
             </div>
           </div>
-          {/* Decorative shapes */}
-          <div aria-hidden className="pointer-events-none absolute -right-20 top-10 hidden lg:block">
-            <div className="relative h-[420px] w-[420px]">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold/30 to-transparent blur-2xl" />
-              <div className="absolute inset-8 rounded-[3rem] border border-navy/10 bg-white/60 backdrop-blur-sm shadow-elegant rotate-6" />
-              <div className="absolute inset-16 rounded-[2.5rem] border border-navy/10 bg-gradient-to-br from-white to-secondary/60 -rotate-3 flex items-center justify-center">
-                <ShieldCheck className="text-navy/30" size={120} strokeWidth={1} />
-              </div>
-            </div>
+          {/* Animated finance scene */}
+          <div className="pointer-events-none absolute -right-10 top-8 hidden lg:block">
+            <HeroScene />
           </div>
         </div>
       </section>
