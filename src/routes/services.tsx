@@ -49,8 +49,8 @@ function Services() {
       {/* Detailed sections */}
       <section className="container-page py-20 md:py-24">
         <div className="grid gap-6 md:grid-cols-2">
-          {details.map((d) => (
-            <article key={d.title} className="group rounded-2xl border border-border bg-card p-8 md:p-10 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant">
+          {details.map((d, i) => (
+            <article key={d.title} className={`reveal reveal-delay-${(i % 2) + 1} group rounded-2xl border border-border bg-card p-8 md:p-10 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant`}>
               <div className="flex items-center gap-4">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy text-navy-foreground">
                   <d.icon size={22} />
@@ -71,8 +71,8 @@ function Services() {
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">A partner who actually pays attention.</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {reasons.map((r) => (
-              <div key={r.title} className="rounded-2xl bg-card border border-border p-8">
+            {reasons.map((r, i) => (
+              <div key={r.title} className={`reveal reveal-delay-${i + 1} rounded-2xl bg-card border border-border p-8`}>
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-navy">
                   <r.icon size={20} />
                 </div>
@@ -90,19 +90,43 @@ function Services() {
           <p className="text-sm font-semibold uppercase tracking-wider text-gold">How it works</p>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">A simple, three-step process.</h2>
         </div>
-        <ol className="mt-14 grid gap-6 md:grid-cols-3 relative">
-          {steps.map((s, i) => (
-            <li key={s.n} className="relative rounded-2xl border border-border bg-card p-8 shadow-card">
-              <div className="font-display text-5xl font-bold text-gold/80">{s.n}</div>
-              <h3 className="mt-3 text-xl font-semibold text-navy">{s.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
-              {i < steps.length - 1 && (
-                <div aria-hidden className="hidden md:block absolute top-1/2 -right-3 h-px w-6 bg-border" />
-              )}
-            </li>
-          ))}
-        </ol>
+        <div className="relative mt-14">
+          {/* Animated connector line (drawn on scroll, desktop only) */}
+          <svg
+            aria-hidden
+            className="pointer-events-none absolute left-0 right-0 top-[64px] hidden md:block"
+            height="6"
+            viewBox="0 0 1000 6"
+            preserveAspectRatio="none"
+            style={{ width: "100%" }}
+          >
+            <path
+              d="M 20 3 L 980 3"
+              fill="none"
+              stroke="oklch(0.66 0.14 245 / 0.45)"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeDasharray="6 8"
+              className="connector-line"
+            />
+          </svg>
+          <ol className="grid gap-6 md:grid-cols-3 relative">
+            {steps.map((s, i) => (
+              <li
+                key={s.n}
+                className={`step-pop d${i + 1} relative rounded-2xl border border-border bg-card p-8 shadow-card`}
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-soft ring-1 ring-sky/30">
+                  <span className="font-display text-lg font-bold text-[oklch(0.5_0.14_245)]">{s.n}</span>
+                </div>
+                <h3 className="mt-5 text-xl font-semibold text-navy">{s.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
+
 
       {/* CTA */}
       <section className="container-page pb-20">
