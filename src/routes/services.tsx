@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Award, Heart, Wallet } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Award, Heart, Wallet, FileText, Receipt, Banknote, ClipboardList, TrendingUp, FileSpreadsheet, CircleDollarSign, Settings2 } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -30,6 +30,17 @@ const steps = [
   { n: "01", title: "Initial Consultation", body: "We discuss your needs, goals, and current financial picture." },
   { n: "02", title: "Data Gathering", body: "We collect the records and details needed to do the work right." },
   { n: "03", title: "Review and Analysis", body: "We review, analyze, and deliver clear insights and next steps." },
+];
+
+const included = [
+  { icon: FileText, title: "Accounts Receivable", body: "Invoicing and tracking what's owed to you, so nothing slips through." },
+  { icon: Receipt, title: "Accounts Payable", body: "Bill tracking and timely payments to keep vendors happy." },
+  { icon: Banknote, title: "Bank Reconciliation", body: "Every transaction matched and verified against your bank records." },
+  { icon: ClipboardList, title: "Ledger Maintenance", body: "Clean, categorized books that always tie out." },
+  { icon: TrendingUp, title: "Cash Flow Tracking", body: "Know what's coming in, what's going out, and what's left." },
+  { icon: FileSpreadsheet, title: "Monthly Financial Reports", body: "P&L, balance sheet, and clear summaries delivered each month." },
+  { icon: CircleDollarSign, title: "Expense Tracking", body: "Categorized expenses so deductions are never missed." },
+  { icon: Settings2, title: "Accounting Software Setup", body: "QuickBooks Online or Xero, configured the right way from day one." },
 ];
 
 function Services() {
