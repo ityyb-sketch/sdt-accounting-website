@@ -53,25 +53,33 @@ function Home() {
         </div>
       </section>
 
+      {/* Stats strip */}
+      <StatsStrip />
+
       {/* Services */}
-      <section className="container-page py-20 md:py-28">
+      <section className="container-page py-16 md:py-24">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-gold">What we do</p>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Services built around your business</h2>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {services.map((s, i) => (
-            <div key={s.title} className={`reveal reveal-delay-${i + 1} group relative rounded-2xl border border-border bg-card p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant`}>
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy text-navy-foreground">
-                <s.icon size={22} />
+            <div
+              key={s.title}
+              className={`svc-card reveal reveal-delay-${i + 1} group relative rounded-2xl border border-border bg-card p-8 shadow-card transition-all hover:-translate-y-1.5 hover:shadow-elegant hover:border-sky/40`}
+            >
+              <div aria-hidden className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-soft to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="svc-icon relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-soft text-navy ring-1 ring-sky/20">
+                <s.icon size={24} className="svc-icon-glyph text-[oklch(0.5_0.14_245)]" />
               </div>
-              <h3 className="mt-6 text-xl font-semibold text-navy">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
-              <div className="absolute bottom-0 left-8 right-8 h-0.5 bg-gradient-to-r from-gold to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+              <h3 className="relative mt-6 text-xl font-semibold text-navy">{s.title}</h3>
+              <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+              <div className="absolute bottom-0 left-8 right-8 h-0.5 bg-gradient-to-r from-sky to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
             </div>
           ))}
         </div>
       </section>
+
 
       {/* Purpose */}
       <section className="bg-muted/40 border-y border-border">
