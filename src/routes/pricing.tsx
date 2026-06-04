@@ -82,7 +82,7 @@ function Pricing() {
               key={p.name}
               className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-2xl bg-card p-8 shadow-card transition-all hover:-translate-y-1.5 hover:shadow-elegant ${
                 p.popular
-                  ? "border-2 border-[#3E2C23] md:-mt-4 md:mb-4 ring-1 ring-sky/30"
+                  ? "border-2 border-[#0D9488] md:-mt-4 md:mb-4 ring-1 ring-sky/30"
                   : "border border-border"
               }`}
             >
@@ -100,7 +100,7 @@ function Pricing() {
               <ul className="mt-6 flex-1 space-y-3">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-navy/80">
-                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-soft text-[#3E2C23]">
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-soft text-[#0D9488]">
                       <Check size={12} strokeWidth={3} />
                     </span>
                     {f}
@@ -138,7 +138,7 @@ function Pricing() {
                 key={s.title}
                 className={`reveal reveal-delay-${i + 1} relative rounded-2xl p-8 transition-all hover:-translate-y-1 ${
                   s.free
-                    ? "bg-gradient-to-br from-[#EFE7DD] to-white border-2 border-[#3E2C23] shadow-elegant"
+                    ? "bg-gradient-to-br from-[#E1F5EE] to-white border-2 border-[#0D9488] shadow-elegant"
                     : "bg-card border border-border shadow-card hover:shadow-elegant"
                 }`}
               >
@@ -147,11 +147,11 @@ function Pricing() {
                     <Sparkles size={12} /> Free
                   </span>
                 )}
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-soft text-[#3E2C23] ring-1 ring-sky/20">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-soft text-[#0D9488] ring-1 ring-sky/20">
                   <s.icon size={22} />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-navy">{s.title}</h3>
-                <div className={`mt-2 font-display text-xl font-bold ${s.free ? "text-[#3E2C23]" : "text-navy"}`}>{s.price}</div>
+                <div className={`mt-2 font-display text-xl font-bold ${s.free ? "text-[#0D9488]" : "text-navy"}`}>{s.price}</div>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
               </div>
             ))}

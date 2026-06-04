@@ -81,7 +81,7 @@ function Home() {
             >
               <div aria-hidden className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-soft to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="svc-icon relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-soft text-navy ring-1 ring-sky/20">
-                <s.icon size={24} className="svc-icon-glyph text-[#3E2C23]" />
+                <s.icon size={24} className="svc-icon-glyph text-[#0D9488]" />
               </div>
               <h3 className="relative mt-6 text-xl font-semibold text-navy">{s.title}</h3>
               <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
@@ -103,7 +103,7 @@ function Home() {
               key={it.label}
               className={`reveal reveal-delay-${(i % 3) + 1} group flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-card transition-all hover:-translate-y-0.5 hover:border-sky/40 hover:shadow-elegant`}
             >
-              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[#3E2C23] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
+              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[#0D9488] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
                 <it.icon size={18} />
               </span>
               <span className="text-sm font-semibold text-navy">{it.label}</span>
@@ -164,7 +164,7 @@ function Home() {
               key={b.label}
               className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-card hover:bg-sky-soft"
             >
-              <b.icon size={16} className="text-[#3E2C23]" />
+              <b.icon size={16} className="text-[#0D9488]" />
               {b.label}
             </span>
           ))}
