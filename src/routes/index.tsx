@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck, BadgeCheck, Award } from "lucide-react";
 import { HeroScene } from "@/components/hero-scene";
 import { StatsStrip } from "@/components/stats-strip";
 
@@ -114,6 +114,26 @@ function Home() {
             Get Started <ArrowRight size={16} />
           </Link>
           <div aria-hidden className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
+        </div>
+      </section>
+
+      {/* Trust badges */}
+      <section className="container-page pb-16">
+        <div className="reveal flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mr-2">Certified &amp; Accredited</span>
+          {[
+            { icon: Award, label: "ACCA" },
+            { icon: BadgeCheck, label: "QuickBooks Online Certified" },
+            { icon: ShieldCheck, label: "Xero Certified" },
+          ].map((b) => (
+            <span
+              key={b.label}
+              className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-card hover:bg-sky-soft"
+            >
+              <b.icon size={16} className="text-[oklch(0.5_0.14_245)]" />
+              {b.label}
+            </span>
+          ))}
         </div>
       </section>
     </>
