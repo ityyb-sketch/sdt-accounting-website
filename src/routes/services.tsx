@@ -74,6 +74,31 @@ function Services() {
         </div>
       </section>
 
+      {/* What's included */}
+      <section className="container-page pb-8 md:pb-16">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold">What's included</p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Every package, fully covered</h2>
+          <p className="mt-4 text-muted-foreground">The core work we handle, so you can focus on running the business.</p>
+        </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {included.map((it, i) => (
+            <div
+              key={it.title}
+              className={`reveal reveal-delay-${(i % 3) + 1} group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-sky/40 hover:shadow-elegant`}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-soft text-[oklch(0.5_0.14_245)] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
+                <it.icon size={18} />
+              </span>
+              <h3 className="mt-4 text-base font-semibold text-navy">{it.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+
       {/* Why choose us */}
       <section className="bg-muted/40 border-y border-border">
         <div className="container-page py-20 md:py-24">
