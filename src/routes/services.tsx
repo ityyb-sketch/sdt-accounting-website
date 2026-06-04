@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Award, Heart, Wallet } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Award, Heart, Wallet, FileText, Receipt, Banknote, ClipboardList, TrendingUp, FileSpreadsheet, CircleDollarSign, Settings2 } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -32,6 +32,17 @@ const steps = [
   { n: "03", title: "Review and Analysis", body: "We review, analyze, and deliver clear insights and next steps." },
 ];
 
+const included = [
+  { icon: FileText, title: "Accounts Receivable", body: "Invoicing and tracking what's owed to you, so nothing slips through." },
+  { icon: Receipt, title: "Accounts Payable", body: "Bill tracking and timely payments to keep vendors happy." },
+  { icon: Banknote, title: "Bank Reconciliation", body: "Every transaction matched and verified against your bank records." },
+  { icon: ClipboardList, title: "Ledger Maintenance", body: "Clean, categorized books that always tie out." },
+  { icon: TrendingUp, title: "Cash Flow Tracking", body: "Know what's coming in, what's going out, and what's left." },
+  { icon: FileSpreadsheet, title: "Monthly Financial Reports", body: "P&L, balance sheet, and clear summaries delivered each month." },
+  { icon: CircleDollarSign, title: "Expense Tracking", body: "Categorized expenses so deductions are never missed." },
+  { icon: Settings2, title: "Accounting Software Setup", body: "QuickBooks Online or Xero, configured the right way from day one." },
+];
+
 function Services() {
   return (
     <>
@@ -62,6 +73,31 @@ function Services() {
           ))}
         </div>
       </section>
+
+      {/* What's included */}
+      <section className="container-page pb-8 md:pb-16">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold">What's included</p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Every package, fully covered</h2>
+          <p className="mt-4 text-muted-foreground">The core work we handle, so you can focus on running the business.</p>
+        </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {included.map((it, i) => (
+            <div
+              key={it.title}
+              className={`reveal reveal-delay-${(i % 3) + 1} group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-sky/40 hover:shadow-elegant`}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-soft text-[oklch(0.5_0.14_245)] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
+                <it.icon size={18} />
+              </span>
+              <h3 className="mt-4 text-base font-semibold text-navy">{it.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
 
       {/* Why choose us */}
       <section className="bg-muted/40 border-y border-border">

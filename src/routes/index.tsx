@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck, BadgeCheck, Award } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck, BadgeCheck, ShoppingCart, Rocket, Briefcase, UtensilsCrossed, Home as HomeIcon, HardHat, Stethoscope, HeartHandshake } from "lucide-react";
 import { HeroScene } from "@/components/hero-scene";
 import { StatsStrip } from "@/components/stats-strip";
 
@@ -19,6 +19,17 @@ const services = [
   { icon: BarChart3, title: "Comprehensive Accounting", body: "We monitor your financial health closely: tracking transactions, preparing financial reports, and helping you make informed decisions." },
   { icon: Calculator, title: "Expert Tax Preparation", body: "We navigate the complexities of your tax return, maximize deductions, and ensure timely filing." },
   { icon: BookOpen, title: "Reliable Bookkeeping", body: "We keep your financial records accurate and up to date — from tracking expenses to managing invoices." },
+];
+
+const industries = [
+  { icon: ShoppingCart, label: "E-commerce & Online Sellers" },
+  { icon: Rocket, label: "Startups & SaaS" },
+  { icon: Briefcase, label: "Freelancers & Consultants" },
+  { icon: UtensilsCrossed, label: "Restaurants & Retail" },
+  { icon: HomeIcon, label: "Real Estate & Rentals" },
+  { icon: HardHat, label: "Construction & Trades" },
+  { icon: Stethoscope, label: "Healthcare Practices" },
+  { icon: HeartHandshake, label: "Nonprofits" },
 ];
 
 function Home() {
@@ -80,6 +91,30 @@ function Home() {
         </div>
       </section>
 
+      {/* Who we serve */}
+      <section className="container-page pb-8 md:pb-16">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-gold">Who we serve</p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Small businesses across every industry</h2>
+        </div>
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {industries.map((it, i) => (
+            <div
+              key={it.label}
+              className={`reveal reveal-delay-${(i % 3) + 1} group flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-card transition-all hover:-translate-y-0.5 hover:border-sky/40 hover:shadow-elegant`}
+            >
+              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[oklch(0.5_0.14_245)] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
+                <it.icon size={18} />
+              </span>
+              <span className="text-sm font-semibold text-navy">{it.label}</span>
+            </div>
+          ))}
+        </div>
+        <p className="reveal mt-6 text-center text-muted-foreground italic">…and every business in between.</p>
+      </section>
+
+
+
 
       {/* Purpose */}
       <section className="bg-muted/40 border-y border-border">
@@ -122,7 +157,6 @@ function Home() {
         <div className="reveal flex flex-wrap items-center justify-center gap-3 md:gap-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mr-2">Certified &amp; Accredited</span>
           {[
-            { icon: Award, label: "ACCA" },
             { icon: BadgeCheck, label: "QuickBooks Online Certified" },
             { icon: ShieldCheck, label: "Xero Certified" },
           ].map((b) => (
