@@ -42,39 +42,39 @@
 
 :root {
   --radius: 0.875rem;
-  /* Espresso Light palette */
-  --background: #FBF9F6;
-  --foreground: #16110E;
+  /* Modern Teal palette */
+  --background: #FFFFFF;
+  --foreground: #042F2A;
   --card: #FFFFFF;
-  --card-foreground: #16110E;
+  --card-foreground: #042F2A;
   --popover: #FFFFFF;
-  --popover-foreground: #16110E;
+  --popover-foreground: #042F2A;
 
-  /* "navy" token = near-black warm text */
-  --navy: #16110E;
-  --navy-foreground: #FBF9F6;
+  /* "navy" token = dark teal-black text */
+  --navy: #042F2A;
+  --navy-foreground: #FFFFFF;
 
-  /* "gold" token = espresso primary accent */
-  --gold: #3E2C23;
-  --gold-foreground: #FBF9F6;
+  /* "gold" token = primary teal accent */
+  --gold: #0D9488;
+  --gold-foreground: #FFFFFF;
 
-  /* "sky" tokens = espresso accent + cream tint */
-  --sky: #3E2C23;
-  --sky-soft: #EFE7DD;
+  /* "sky" tokens = teal accent + light teal tint */
+  --sky: #0D9488;
+  --sky-soft: #E1F5EE;
 
-  --primary: #3E2C23;
-  --primary-foreground: #FBF9F6;
-  --secondary: #F3EEE7;
-  --secondary-foreground: #16110E;
-  --muted: #F3EEE7;
-  --muted-foreground: #6F6258;
-  --accent: #3E2C23;
-  --accent-foreground: #FBF9F6;
+  --primary: #0D9488;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E7F5F2;
+  --secondary-foreground: #042F2A;
+  --muted: #E7F5F2;
+  --muted-foreground: #4D7A72;
+  --accent: #0D9488;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #FBF9F6;
-  --border: #E8DFD3;
-  --input: #E8DFD3;
-  --ring: #3E2C23;
+  --destructive-foreground: #FFFFFF;
+  --border: #CFE9E2;
+  --input: #CFE9E2;
+  --ring: #0D9488;
 }
 
 @layer base {
@@ -100,17 +100,17 @@
   background:
     radial-gradient(60% 80% at 85% 0%, color-mix(in oklab, var(--sky) 14%, transparent), transparent 60%),
     radial-gradient(50% 70% at 0% 100%, color-mix(in oklab, var(--sky) 8%, transparent), transparent 60%),
-    linear-gradient(180deg, #FBF9F6, #FFFFFF);
+    linear-gradient(180deg, #FFFFFF, #FFFFFF);
 }
 
 @utility gradient-navy {
   background:
-    radial-gradient(50% 70% at 100% 0%, color-mix(in oklab, #4A352A 60%, transparent), transparent 60%),
-    linear-gradient(135deg, #3E2C23, #2A1D16);
+    radial-gradient(50% 70% at 100% 0%, color-mix(in oklab, #0F766E 60%, transparent), transparent 60%),
+    linear-gradient(135deg, #0D9488, #042F2A);
 }
 
 @utility surface-soft {
-  background: linear-gradient(180deg, var(--sky-soft), #FBF9F6);
+  background: linear-gradient(180deg, var(--sky-soft), #FFFFFF);
 }
 
 
