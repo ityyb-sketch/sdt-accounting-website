@@ -12,10 +12,12 @@ export function SiteHeader() {
           <span className="grid h-8 w-8 place-items-center rounded-md bg-navy text-navy-foreground text-xs tracking-tight">SDT</span>
           SDT Accounting
         </Link>
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-navy font-semibold" }}>Home</Link>
+          <Link to="/about" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>About</Link>
           <Link to="/services" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>Services</Link>
           <Link to="/pricing" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>Pricing</Link>
+          <Link to="/faq" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>FAQs</Link>
           <Link to="/contact" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>Contact</Link>
           <Link to="/contact" className="inline-flex items-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-navy-foreground shadow-sm hover:bg-navy/90 transition-all hover:shadow-elegant">
             Get Started
@@ -29,8 +31,10 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-border bg-background">
           <div className="container-page flex flex-col gap-1 py-4">
             <Link to="/" onClick={() => setOpen(false)} className="py-2 text-navy">Home</Link>
+            <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-navy">About</Link>
             <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-navy">Services</Link>
             <Link to="/pricing" onClick={() => setOpen(false)} className="py-2 text-navy">Pricing</Link>
+            <Link to="/faq" onClick={() => setOpen(false)} className="py-2 text-navy">FAQs</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="py-2 text-navy">Contact</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="mt-2 inline-flex w-fit items-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-navy-foreground">
               Get Started
@@ -45,8 +49,8 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-muted/40 mt-24">
-      <div className="container-page py-12 grid gap-8 md:grid-cols-3">
-        <div>
+      <div className="container-page py-12 grid gap-8 md:grid-cols-4">
+        <div className="md:col-span-1">
           <div className="font-display text-lg font-semibold text-navy">SDT Accounting</div>
           <p className="mt-2 text-sm text-muted-foreground max-w-xs">
             Expert bookkeeping and tax preparation. Serving clients nationwide, fully remote.
@@ -55,9 +59,16 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2 text-sm">
           <div className="font-semibold text-navy mb-1">Navigate</div>
           <Link to="/" className="text-muted-foreground hover:text-navy">Home</Link>
+          <Link to="/about" className="text-muted-foreground hover:text-navy">About</Link>
           <Link to="/services" className="text-muted-foreground hover:text-navy">Services</Link>
           <Link to="/pricing" className="text-muted-foreground hover:text-navy">Pricing</Link>
+          <Link to="/faq" className="text-muted-foreground hover:text-navy">FAQs</Link>
           <Link to="/contact" className="text-muted-foreground hover:text-navy">Contact</Link>
+        </div>
+        <div className="flex flex-col gap-2 text-sm">
+          <div className="font-semibold text-navy mb-1">Legal</div>
+          <Link to="/privacy" className="text-muted-foreground hover:text-navy">Privacy Policy</Link>
+          <Link to="/terms" className="text-muted-foreground hover:text-navy">Terms of Service</Link>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <div className="font-semibold text-navy mb-1">Contact</div>

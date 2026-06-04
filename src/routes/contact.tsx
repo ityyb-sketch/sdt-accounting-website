@@ -1,26 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Clock } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Mail, MapPin, Clock, ArrowRight, Send } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — SDT Accounting" },
-      { name: "description", content: "Get in touch with SDT Accounting. Email us at info@sdtaccounting.com — we serve clients nationwide, fully remote." },
+      { name: "description", content: "Get in touch with SDT Accounting. Email us at info@sdtaccounting.com or request a callback — we serve clients nationwide, fully remote." },
       { property: "og:title", content: "Contact SDT Accounting" },
-      { property: "og:description", content: "Email info@sdtaccounting.com — fully remote, nationwide." },
+      { property: "og:description", content: "Email info@sdtaccounting.com or request a callback — fully remote, nationwide." },
     ],
   }),
   component: Contact,
 });
-
-const faqs = [
-  { q: "What services do you provide?", a: "We provide bookkeeping, tax preparation, accounting, and financial consulting." },
-  { q: "How do I schedule a consultation?", a: "Email us at info@sdtaccounting.com and we'll respond within one business day." },
-  { q: "What are your fees?", a: "Pricing is tailored to your needs — contact us for a free quote." },
-  { q: "Do you offer remote services?", a: "Yes — we work with clients nationwide, fully remote." },
-  { q: "How do I get support?", a: "Email us anytime at info@sdtaccounting.com." },
-];
 
 function Contact() {
   return (
@@ -72,25 +63,102 @@ function Contact() {
         </div>
       </section>
 
+      {/* Callback form */}
       <section className="bg-muted/40 border-y border-border">
         <div className="container-page py-20 md:py-24">
           <div className="grid md:grid-cols-12 gap-10">
-            <div className="md:col-span-4">
-              <p className="text-sm font-semibold uppercase tracking-wider text-gold">FAQ</p>
-              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Frequently asked questions</h2>
-              <p className="mt-4 text-muted-foreground">Can't find what you're looking for? Email us — we're happy to help.</p>
+            <div className="reveal md:col-span-5">
+              <p className="text-sm font-semibold uppercase tracking-wider text-gold">Get a callback</p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Tell us about your business</h2>
+              <p className="mt-4 text-muted-foreground">
+                Send us a message and we'll get back to you within one business day.
+              </p>
+              <p className="mt-6 text-sm text-muted-foreground">
+                Questions? Visit our{" "}
+                <Link to="/faq" className="text-navy font-semibold underline underline-offset-2 hover:text-navy/80">FAQs</Link>.
+              </p>
             </div>
-            <div className="md:col-span-8">
-              <Accordion type="single" collapsible className="rounded-2xl border border-border bg-card divide-y divide-border overflow-hidden">
-                {faqs.map((f, i) => (
-                  <AccordionItem key={i} value={`item-${i}`} className="border-0 px-6">
-                    <AccordionTrigger className="text-left font-semibold text-navy py-5 hover:no-underline">{f.q}</AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{f.a}</AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+            <div className="reveal reveal-delay-1 md:col-span-7">
+              <form
+                action="https://formsubmit.co/info@sdtaccounting.com"
+                method="POST"
+                className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-card space-y-5"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://sdtaccounting.com/contact" />
+
+                <div className="grid gap-5 md:grid-cols-2">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-semibold text-navy mb-2">Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30"
+                      placeholder="Jane Smith"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-semibold text-navy mb-2">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30"
+                      placeholder="you@business.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-2">
+                    Phone <span className="font-normal text-muted-foreground">(optional)</span>
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold text-navy mb-2">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30 resize-y"
+                    placeholder="Tell us a little about your business and what you're looking for…"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="group inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground shadow-elegant hover:shadow-lg transition-all"
+                >
+                  Request Callback
+                  <Send size={16} className="transition-transform group-hover:translate-x-0.5" />
+                </button>
+              </form>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="container-page py-20">
+        <div className="gradient-navy relative overflow-hidden rounded-3xl px-8 md:px-16 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-navy-foreground">Prefer to browse first?</h2>
+            <p className="mt-2 text-navy-foreground/70">Check our packages or read common questions.</p>
+          </div>
+          <Link to="/pricing" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all">
+            See Pricing <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
     </>
