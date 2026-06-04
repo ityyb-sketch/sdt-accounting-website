@@ -15,6 +15,7 @@ export function SiteHeader() {
         <nav className="hidden md:flex items-center gap-8">
           <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-navy font-semibold" }}>Home</Link>
           <Link to="/services" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>Services</Link>
+          <Link to="/pricing" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>Pricing</Link>
           <Link to="/contact" className={linkCls} activeProps={{ className: "text-navy font-semibold" }}>Contact</Link>
           <Link to="/contact" className="inline-flex items-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-navy-foreground shadow-sm hover:bg-navy/90 transition-all hover:shadow-elegant">
             Get Started
