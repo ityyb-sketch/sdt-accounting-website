@@ -30,6 +30,7 @@ export function SiteHeader() {
           <div className="container-page flex flex-col gap-1 py-4">
             <Link to="/" onClick={() => setOpen(false)} className="py-2 text-navy">Home</Link>
             <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-navy">Services</Link>
+            <Link to="/pricing" onClick={() => setOpen(false)} className="py-2 text-navy">Pricing</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="py-2 text-navy">Contact</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="mt-2 inline-flex w-fit items-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-navy-foreground">
               Get Started
