@@ -56,6 +56,7 @@ export function SiteFooter() {
           <div className="font-semibold text-navy mb-1">Navigate</div>
           <Link to="/" className="text-muted-foreground hover:text-navy">Home</Link>
           <Link to="/services" className="text-muted-foreground hover:text-navy">Services</Link>
+          <Link to="/pricing" className="text-muted-foreground hover:text-navy">Pricing</Link>
           <Link to="/contact" className="text-muted-foreground hover:text-navy">Contact</Link>
         </div>
         <div className="flex flex-col gap-2 text-sm">
