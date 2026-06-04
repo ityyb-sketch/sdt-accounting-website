@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Calculator, BookOpen } from "lucide-react";
+import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck, BadgeCheck, Award } from "lucide-react";
 import { HeroScene } from "@/components/hero-scene";
 import { StatsStrip } from "@/components/stats-strip";
 
