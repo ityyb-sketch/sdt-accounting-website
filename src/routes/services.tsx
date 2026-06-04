@@ -49,8 +49,8 @@ function Services() {
       {/* Detailed sections */}
       <section className="container-page py-20 md:py-24">
         <div className="grid gap-6 md:grid-cols-2">
-          {details.map((d) => (
-            <article key={d.title} className="group rounded-2xl border border-border bg-card p-8 md:p-10 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant">
+          {details.map((d, i) => (
+            <article key={d.title} className={`reveal reveal-delay-${(i % 2) + 1} group rounded-2xl border border-border bg-card p-8 md:p-10 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant`}>
               <div className="flex items-center gap-4">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy text-navy-foreground">
                   <d.icon size={22} />
@@ -71,8 +71,8 @@ function Services() {
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">A partner who actually pays attention.</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {reasons.map((r) => (
-              <div key={r.title} className="rounded-2xl bg-card border border-border p-8">
+            {reasons.map((r, i) => (
+              <div key={r.title} className={`reveal reveal-delay-${i + 1} rounded-2xl bg-card border border-border p-8`}>
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-navy">
                   <r.icon size={20} />
                 </div>
