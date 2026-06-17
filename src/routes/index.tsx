@@ -123,10 +123,10 @@ function Home() {
       {/* Purpose */}
       <section className="bg-muted/40 border-y border-border">
         <div className="container-page py-20 md:py-28 grid md:grid-cols-12 gap-10 items-start">
-          <div className="md:col-span-5">
+          <Parallax speed={-30} className="md:col-span-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-gold">Our Purpose</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Clarity, integrity, and trust at every step.</h2>
-          </div>
+          </Parallax>
           <div className="md:col-span-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
               We provide reliable accounting and tax services tailored to individuals and businesses. Our mission is simple: to support our clients in achieving their financial goals with clarity and integrity, through relationships built on trust and transparency.
@@ -152,7 +152,7 @@ function Home() {
           <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all shadow-elegant">
             Get Started <ArrowRight size={16} />
           </Link>
-          <div aria-hidden className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
+          <Parallax speed={50} className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" style={{ position: "absolute" }}><span aria-hidden /></Parallax>
         </div>
       </section>
 
