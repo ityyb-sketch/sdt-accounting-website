@@ -152,7 +152,7 @@ function Home() {
           <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all shadow-elegant">
             Get Started <ArrowRight size={16} />
           </Link>
-          <Parallax speed={50} className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" style={{ position: "absolute" }}><span aria-hidden /></Parallax>
+          <Parallax speed={40} className="absolute -bottom-20 -right-20"><div aria-hidden className="h-72 w-72 rounded-full bg-gold/20 blur-3xl" /></Parallax>
         </div>
       </section>
 
