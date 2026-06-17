@@ -241,5 +241,7 @@ html.lenis, html.lenis body { height: auto; }
   .reveal, .step-pop { opacity: 1 !important; transform: none !important; transition: none !important; }
   .connector-line { stroke-dashoffset: 0 !important; transition: none !important; }
   .anim-float, .anim-float-slower, .anim-orbit, .anim-coin, .bar-anim, .draw-spark { animation: none !important; }
+  .kinetic-line > span { transform: none !important; opacity: 1 !important; animation: none !important; }
+  .kinetic-accent { animation: none !important; }
   html { scroll-behavior: auto; }
 }
