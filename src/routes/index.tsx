@@ -165,6 +165,23 @@ const faqs = [
 ];
 
 function Home() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    const tryScroll = () => {
+      const el = document.getElementById(hash);
+      if (!el) return false;
+      const lenis = (window as any).__lenis;
+      if (lenis) lenis.scrollTo(el, { offset: -72 });
+      else el.scrollIntoView({ behavior: "smooth", block: "start" });
+      return true;
+    };
+    const t1 = window.setTimeout(tryScroll, 100);
+    const t2 = window.setTimeout(tryScroll, 600);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, []);
+
   return (
     <>
       {/* ============== HERO ============== */}
