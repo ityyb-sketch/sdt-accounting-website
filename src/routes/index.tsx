@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck, BadgeCheck, ShoppingCart, Rocket, Briefcase, UtensilsCrossed, Home as HomeIcon, HardHat, Stethoscope, HeartHandshake } from "lucide-react";
 import { HeroScene } from "@/components/hero-scene";
 import { StatsStrip } from "@/components/stats-strip";
+import { Parallax } from "@/components/parallax";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,8 +43,9 @@ function Home() {
             <span className="reveal inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-navy">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted Accounting Partner
             </span>
-            <h1 className="reveal reveal-delay-1 mt-6 text-4xl md:text-6xl font-bold text-navy leading-[1.05]">
-              Your trusted partner for <span className="relative inline-block">expert accounting<span className="absolute -bottom-2 left-0 right-0 h-1 bg-gold/70 rounded-full" /></span>
+            <h1 className="mt-6 text-4xl md:text-6xl font-bold text-navy leading-[1.05]">
+              <span className="kinetic-line"><span>Your trusted partner</span></span>
+              <span className="kinetic-line k-d1"><span>for&nbsp;</span><span className="kinetic-accent relative inline-block">expert accounting<span aria-hidden className="absolute -bottom-2 left-0 right-0 h-1 bg-gold/70 rounded-full" /></span></span>
             </h1>
             <p className="reveal reveal-delay-2 mt-6 text-lg text-muted-foreground max-w-2xl">
               Experience peace of mind with our expert bookkeeping and tax preparation services. We simplify the financial process so you stay compliant and focused on growing your business.
@@ -57,9 +59,11 @@ function Home() {
               </Link>
             </div>
           </div>
-          {/* Animated finance scene */}
+          {/* Animated finance scene with parallax depth */}
           <div className="pointer-events-none absolute -right-10 top-8 hidden lg:block">
-            <HeroScene />
+            <Parallax speed={-70}>
+              <HeroScene />
+            </Parallax>
           </div>
         </div>
       </section>
