@@ -221,12 +221,7 @@ function Home() {
             <div className="reveal reveal-delay-2 relative">
               <Parallax speed={-40}>
                 <div className="relative">
-                  <img
-                    src={PHOTOS.hero}
-                    alt="Small business owner reviewing finances"
-                    loading="eager"
-                    className="w-full h-[420px] md:h-[520px] object-cover rounded-3xl shadow-elegant ring-1 ring-navy/5"
-                  />
+                  <HeroScene />
                   <div aria-hidden className="absolute -bottom-6 -left-6 hidden md:block">
                     <div className="rounded-2xl bg-white/90 backdrop-blur border border-navy/10 shadow-card px-5 py-4 flex items-center gap-3">
                       <span className="grid h-10 w-10 place-items-center rounded-xl bg-sky-soft text-[#0D9488]">
@@ -240,9 +235,6 @@ function Home() {
                   </div>
                 </div>
               </Parallax>
-              <div className="pointer-events-none absolute -right-10 -top-10 hidden xl:block opacity-70">
-                <HeroScene />
-              </div>
             </div>
           </div>
         </div>
