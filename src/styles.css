@@ -89,6 +89,39 @@
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
 }
 
+/* Lenis smooth-scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Kinetic headline line-reveal */
+.kinetic-line { display: block; overflow: hidden; }
+.kinetic-line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: kinetic-rise 0.95s cubic-bezier(.22,1,.36,1) forwards;
+}
+.kinetic-line.k-d1 > span { animation-delay: 0.15s; }
+.kinetic-line.k-d2 > span { animation-delay: 0.32s; }
+.kinetic-line.k-d3 > span { animation-delay: 0.49s; }
+@keyframes kinetic-rise {
+  to { transform: translateY(0); opacity: 1; }
+}
+.kinetic-accent {
+  background: linear-gradient(120deg, #0D9488 0%, #0F766E 60%, #0D9488 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: kinetic-shine 6s ease-in-out 1.2s infinite;
+}
+@keyframes kinetic-shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 @utility container-page {
   width: 100%;
   margin-inline: auto;
@@ -208,5 +241,7 @@
   .reveal, .step-pop { opacity: 1 !important; transform: none !important; transition: none !important; }
   .connector-line { stroke-dashoffset: 0 !important; transition: none !important; }
   .anim-float, .anim-float-slower, .anim-orbit, .anim-coin, .bar-anim, .draw-spark { animation: none !important; }
+  .kinetic-line > span { transform: none !important; opacity: 1 !important; animation: none !important; }
+  .kinetic-accent { animation: none !important; }
   html { scroll-behavior: auto; }
 }

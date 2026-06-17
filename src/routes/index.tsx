@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BarChart3, Calculator, BookOpen, ShieldCheck, BadgeCheck, ShoppingCart, Rocket, Briefcase, UtensilsCrossed, Home as HomeIcon, HardHat, Stethoscope, HeartHandshake } from "lucide-react";
 import { HeroScene } from "@/components/hero-scene";
 import { StatsStrip } from "@/components/stats-strip";
+import { Parallax } from "@/components/parallax";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,8 +43,9 @@ function Home() {
             <span className="reveal inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-navy">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted Accounting Partner
             </span>
-            <h1 className="reveal reveal-delay-1 mt-6 text-4xl md:text-6xl font-bold text-navy leading-[1.05]">
-              Your trusted partner for <span className="relative inline-block">expert accounting<span className="absolute -bottom-2 left-0 right-0 h-1 bg-gold/70 rounded-full" /></span>
+            <h1 className="mt-6 text-4xl md:text-6xl font-bold text-navy leading-[1.05]">
+              <span className="kinetic-line"><span>Your trusted partner</span></span>
+              <span className="kinetic-line k-d1"><span>for&nbsp;</span><span className="kinetic-accent relative inline-block">expert accounting<span aria-hidden className="absolute -bottom-2 left-0 right-0 h-1 bg-gold/70 rounded-full" /></span></span>
             </h1>
             <p className="reveal reveal-delay-2 mt-6 text-lg text-muted-foreground max-w-2xl">
               Experience peace of mind with our expert bookkeeping and tax preparation services. We simplify the financial process so you stay compliant and focused on growing your business.
@@ -57,9 +59,11 @@ function Home() {
               </Link>
             </div>
           </div>
-          {/* Animated finance scene */}
+          {/* Animated finance scene with parallax depth */}
           <div className="pointer-events-none absolute -right-10 top-8 hidden lg:block">
-            <HeroScene />
+            <Parallax speed={-70}>
+              <HeroScene />
+            </Parallax>
           </div>
         </div>
       </section>
@@ -119,10 +123,10 @@ function Home() {
       {/* Purpose */}
       <section className="bg-muted/40 border-y border-border">
         <div className="container-page py-20 md:py-28 grid md:grid-cols-12 gap-10 items-start">
-          <div className="md:col-span-5">
+          <Parallax speed={-30} className="md:col-span-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-gold">Our Purpose</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Clarity, integrity, and trust at every step.</h2>
-          </div>
+          </Parallax>
           <div className="md:col-span-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
               We provide reliable accounting and tax services tailored to individuals and businesses. Our mission is simple: to support our clients in achieving their financial goals with clarity and integrity, through relationships built on trust and transparency.
@@ -148,7 +152,7 @@ function Home() {
           <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all shadow-elegant">
             Get Started <ArrowRight size={16} />
           </Link>
-          <div aria-hidden className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
+          <Parallax speed={40} className="absolute -bottom-20 -right-20"><div aria-hidden className="h-72 w-72 rounded-full bg-gold/20 blur-3xl" /></Parallax>
         </div>
       </section>
 
