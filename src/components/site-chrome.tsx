@@ -51,7 +51,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between">
         <NavAnchor hash="top" className="flex items-center gap-2 font-display text-lg font-semibold text-navy">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-navy text-navy-foreground text-xs tracking-tight">SDT</span>
+          <img src="/logo-mark.png" alt="SDT Accounting logo" className="h-9 w-9" />
           SDT Accounting
         </NavAnchor>
         <nav className="hidden md:flex items-center gap-7">
@@ -89,18 +89,18 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  const linkCls = "text-[#A7D9CE] hover:text-[#E7F5F2] transition-colors cursor-pointer";
+  const linkCls = "text-[#9AA6BE] hover:text-[#EEF2FF] transition-colors cursor-pointer";
   return (
-    <footer className="bg-[#042F2A] text-[#E7F5F2] mt-24">
+    <footer className="bg-[#1B1B1D] text-[#EEF2FF] mt-24">
       <div className="container-page py-12 grid gap-8 md:grid-cols-4">
         <div className="md:col-span-1">
-          <div className="font-display text-lg font-semibold text-[#E7F5F2]">SDT Accounting</div>
-          <p className="mt-2 text-sm text-[#A7D9CE] max-w-xs">
+          <img src="/logo-primary-dark.png" alt="SDT Accounting — Sam’s Daybooks & Tax" className="h-12 w-auto" />
+          <p className="mt-2 text-sm text-[#9AA6BE] max-w-xs">
             Expert bookkeeping and tax preparation. Serving clients nationwide, fully remote.
           </p>
         </div>
         <div className="flex flex-col gap-2 text-sm">
-          <div className="font-semibold text-[#E7F5F2] mb-1">Navigate</div>
+          <div className="font-semibold text-[#EEF2FF] mb-1">Navigate</div>
           <a href="/" className={linkCls}>Home</a>
           <a href="/#about" className={linkCls}>About</a>
           <a href="/#services" className={linkCls}>Services</a>
@@ -109,20 +109,20 @@ export function SiteFooter() {
           <a href="/#contact" className={linkCls}>Contact</a>
         </div>
         <div className="flex flex-col gap-2 text-sm">
-          <div className="font-semibold text-[#E7F5F2] mb-1">Legal</div>
+          <div className="font-semibold text-[#EEF2FF] mb-1">Legal</div>
           <Link to="/privacy" className={linkCls}>Privacy Policy</Link>
           <Link to="/terms" className={linkCls}>Terms of Service</Link>
         </div>
         <div className="flex flex-col gap-2 text-sm">
-          <div className="font-semibold text-[#E7F5F2] mb-1">Contact</div>
+          <div className="font-semibold text-[#EEF2FF] mb-1">Contact</div>
           <a href="mailto:info@sdtaccounting.com" className={linkCls}>info@sdtaccounting.com</a>
-          <span className="text-[#A7D9CE]">Fully remote, nationwide</span>
+          <span className="text-[#9AA6BE]">Fully remote, nationwide</span>
         </div>
       </div>
-      <div className="border-t border-[#E7F5F2]/10">
-        <div className="container-page py-5 text-xs text-[#A7D9CE] flex flex-wrap justify-between gap-2">
+      <div className="border-t border-[#EEF2FF]/10">
+        <div className="container-page py-5 text-xs text-[#9AA6BE] flex flex-wrap justify-between gap-2">
           <span>© 2026 SDT Accounting. All rights reserved.</span>
-          <a href="mailto:info@sdtaccounting.com" className="hover:text-[#E7F5F2]">info@sdtaccounting.com</a>
+          <a href="mailto:info@sdtaccounting.com" className="hover:text-[#EEF2FF]">info@sdtaccounting.com</a>
         </div>
       </div>
     </footer>

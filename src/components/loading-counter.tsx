@@ -50,11 +50,11 @@ export function LoadingCounter() {
       <div className="flex flex-col items-center gap-6">
         <div className="font-display text-6xl md:text-7xl font-bold tabular-nums text-navy tracking-tight">
           {pct.toString().padStart(2, "0")}
-          <span className="text-[#0D9488]">%</span>
+          <span className="text-[#3B5BFF]">%</span>
         </div>
         <div className="h-px w-48 overflow-hidden bg-navy/10">
           <div
-            className="h-full bg-[#0D9488] transition-[width] duration-100 ease-out"
+            className="h-full bg-[#3B5BFF] transition-[width] duration-100 ease-out"
             style={{ width: `${pct}%` }}
           />
         </div>
