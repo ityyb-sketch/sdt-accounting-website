@@ -191,6 +191,19 @@ function Home() {
     <>
       {/* ============== HERO ============== */}
       <section id="top" className="gradient-hero relative overflow-hidden">
+        <video
+          className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-70 [filter:blur(8px)] motion-reduce:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/hero-bg.jpg"
+          aria-hidden="true"
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div aria-hidden className="absolute inset-0 bg-white/60" />
         <div className="container-page py-20 md:py-28 relative">
           <div className="max-w-3xl mx-auto text-center">
               <span className="reveal inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-navy">
