@@ -192,7 +192,7 @@ function Home() {
       {/* ============== HERO ============== */}
       <section id="top" className="gradient-hero relative overflow-hidden">
         <video
-          className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-70 [filter:blur(5px)] motion-reduce:hidden"
+          className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-70 [filter:blur(3px)] motion-reduce:hidden"
           autoPlay
           muted
           loop
