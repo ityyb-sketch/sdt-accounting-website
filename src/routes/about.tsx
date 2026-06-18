@@ -52,10 +52,10 @@ function About() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <BadgeCheck size={16} className="text-[#0D9488]" /> QuickBooks Online Certified
+                <BadgeCheck size={16} className="text-[#3B5BFF]" /> QuickBooks Online Certified
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <ShieldCheck size={16} className="text-[#0D9488]" /> Xero Certified
+                <ShieldCheck size={16} className="text-[#3B5BFF]" /> Xero Certified
               </span>
             </div>
           </div>

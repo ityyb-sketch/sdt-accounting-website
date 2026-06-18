@@ -224,7 +224,7 @@ function Home() {
                   <HeroScene />
                   <div aria-hidden className="absolute -bottom-6 -left-6 hidden md:block">
                     <div className="rounded-2xl bg-white/90 backdrop-blur border border-navy/10 shadow-card px-5 py-4 flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-sky-soft text-[#0D9488]">
+                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-sky-soft text-[#3B5BFF]">
                         <BadgeCheck size={20} />
                       </span>
                       <div>
@@ -268,7 +268,7 @@ function Home() {
                   key={p.title}
                   className={`reveal reveal-delay-${i + 1} flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-card`}
                 >
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[#0D9488] ring-1 ring-sky/20">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[#3B5BFF] ring-1 ring-sky/20">
                     <p.icon size={20} />
                   </span>
                   <div>
@@ -313,9 +313,9 @@ function Home() {
               </ul>
             </div>
 
-            <div className="reveal reveal-delay-2 rounded-2xl border-2 border-[#0D9488] bg-gradient-to-br from-[#E1F5EE] to-white p-8 shadow-elegant">
+            <div className="reveal reveal-delay-2 rounded-2xl border-2 border-[#3B5BFF] bg-gradient-to-br from-[#E8ECFF] to-white p-8 shadow-elegant">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#0D9488] text-white">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#3B5BFF] text-white">
                   <Check size={20} strokeWidth={3} />
                 </span>
                 <h3 className="text-xl font-bold text-navy">SDT Accounting</h3>
@@ -323,7 +323,7 @@ function Home() {
               <ul className="mt-6 space-y-3">
                 {pros.map((c) => (
                   <li key={c} className="flex items-start gap-3 text-sm text-navy/80">
-                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0D9488] text-white">
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3B5BFF] text-white">
                       <Check size={12} strokeWidth={3} />
                     </span>
                     {c}
@@ -363,7 +363,7 @@ function Home() {
                   key={s.title}
                   className={`svc-card reveal reveal-delay-${(i % 3) + 1} group relative rounded-2xl border border-border bg-card p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant hover:border-sky/40`}
                 >
-                  <div className="svc-icon inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-soft text-[#0D9488] ring-1 ring-sky/20">
+                  <div className="svc-icon inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-soft text-[#3B5BFF] ring-1 ring-sky/20">
                     <s.icon size={22} />
                   </div>
                   <h3 className="mt-5 text-lg font-semibold text-navy">{s.title}</h3>
@@ -380,7 +380,7 @@ function Home() {
                     key={it.title}
                     className={`reveal reveal-delay-${(i % 3) + 1} flex gap-3 rounded-xl border border-border bg-card p-4`}
                   >
-                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sky-soft text-[#0D9488] ring-1 ring-sky/20">
+                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sky-soft text-[#3B5BFF] ring-1 ring-sky/20">
                       <it.icon size={16} />
                     </span>
                     <div>
@@ -408,7 +408,7 @@ function Home() {
                 key={it.label}
                 className={`reveal reveal-delay-${(i % 3) + 1} group flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-card transition-all hover:-translate-y-0.5 hover:border-sky/40 hover:shadow-elegant`}
               >
-                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[#0D9488] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-soft text-[#3B5BFF] ring-1 ring-sky/20 transition-transform group-hover:scale-110">
                   <it.icon size={18} />
                 </span>
                 <span className="text-sm font-semibold text-navy">{it.label}</span>
@@ -456,10 +456,10 @@ function Home() {
             </div>
             <div className="reveal mt-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <BadgeCheck size={16} className="text-[#0D9488]" /> QuickBooks Online Certified
+                <BadgeCheck size={16} className="text-[#3B5BFF]" /> QuickBooks Online Certified
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <ShieldCheck size={16} className="text-[#0D9488]" /> Xero Certified
+                <ShieldCheck size={16} className="text-[#3B5BFF]" /> Xero Certified
               </span>
             </div>
           </div>
@@ -483,7 +483,7 @@ function Home() {
                 key={p.name}
                 className={`reveal reveal-delay-${i + 1} relative flex flex-col rounded-2xl bg-card p-8 shadow-card transition-all hover:-translate-y-1.5 hover:shadow-elegant ${
                   p.popular
-                    ? "border-2 border-[#0D9488] md:-mt-4 md:mb-4 ring-1 ring-sky/30"
+                    ? "border-2 border-[#3B5BFF] md:-mt-4 md:mb-4 ring-1 ring-sky/30"
                     : "border border-border"
                 }`}
               >
@@ -501,7 +501,7 @@ function Home() {
                 <ul className="mt-6 flex-1 space-y-3">
                   {p.features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-sm text-navy/80">
-                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-soft text-[#0D9488]">
+                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-soft text-[#3B5BFF]">
                         <Check size={12} strokeWidth={3} />
                       </span>
                       {f}
@@ -535,7 +535,7 @@ function Home() {
                   key={s.title}
                   className={`reveal reveal-delay-${i + 1} relative rounded-2xl p-7 transition-all hover:-translate-y-1 ${
                     s.free
-                      ? "bg-gradient-to-br from-[#E1F5EE] to-white border-2 border-[#0D9488] shadow-elegant"
+                      ? "bg-gradient-to-br from-[#E8ECFF] to-white border-2 border-[#3B5BFF] shadow-elegant"
                       : "bg-card border border-border shadow-card hover:shadow-elegant"
                   }`}
                 >
@@ -544,11 +544,11 @@ function Home() {
                       <Sparkles size={12} /> Free
                     </span>
                   )}
-                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-soft text-[#0D9488] ring-1 ring-sky/20">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-soft text-[#3B5BFF] ring-1 ring-sky/20">
                     <s.icon size={20} />
                   </div>
                   <h4 className="mt-4 text-base font-semibold text-navy">{s.title}</h4>
-                  <div className={`mt-1 font-display text-lg font-bold ${s.free ? "text-[#0D9488]" : "text-navy"}`}>{s.price}</div>
+                  <div className={`mt-1 font-display text-lg font-bold ${s.free ? "text-[#3B5BFF]" : "text-navy"}`}>{s.price}</div>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
                 </div>
               ))}
@@ -597,7 +597,7 @@ function Home() {
               key={b.label}
               className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-card hover:bg-sky-soft"
             >
-              <b.icon size={16} className="text-[#0D9488]" />
+              <b.icon size={16} className="text-[#3B5BFF]" />
               {b.label}
             </span>
           ))}
