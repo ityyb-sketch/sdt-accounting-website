@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SDT Accounting — Expert Bookkeeping & Tax Preparation" },
+      { title: "SDT Accounting — Sam’s Daybooks & Tax" },
       { name: "description", content: "Trusted bookkeeping, tax preparation, and accounting services. Serving clients nationwide, fully remote." },
       { property: "og:title", content: "SDT Accounting" },
       { property: "og:description", content: "Expert bookkeeping & tax preparation, fully remote nationwide." },

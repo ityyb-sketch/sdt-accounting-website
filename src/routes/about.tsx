@@ -5,9 +5,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About SDT — SDT Accounting" },
-      { name: "description", content: "Meet Samiha Syed, founder of SDT Accounting. QuickBooks Online & Xero Certified, serving clients nationwide, fully remote." },
+      { name: "description", content: "Meet Sam, founder of SDT Accounting. QuickBooks Online & Xero Certified, serving clients nationwide, fully remote." },
       { property: "og:title", content: "About SDT Accounting" },
-      { property: "og:description", content: "Founded by Samiha Syed — certified, remote-first bookkeeping for small businesses across the country." },
+      { property: "og:description", content: "Founded by Sam — certified, remote-first bookkeeping for small businesses across the country." },
     ],
   }),
   component: About,
@@ -31,20 +31,20 @@ function About() {
         <div className="grid gap-10 md:grid-cols-12 items-start">
           <div className="reveal md:col-span-4">
             <div className="relative mx-auto md:mx-0 h-48 w-48 rounded-full bg-gradient-to-br from-sky-soft to-white ring-1 ring-sky/30 shadow-elegant grid place-items-center">
-              <span className="font-display text-5xl font-bold text-navy">SS</span>
+              <span className="font-display text-5xl font-bold text-navy">S</span>
               <span className="absolute -bottom-2 -right-2 inline-flex items-center gap-1 rounded-full bg-navy px-3 py-1 text-xs font-semibold text-navy-foreground shadow-card">
                 <BadgeCheck size={14} className="text-gold" /> Founder
               </span>
             </div>
           </div>
           <div className="reveal reveal-delay-1 md:col-span-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy">Samiha Syed</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy">Sam</h2>
             <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-gold">
               Founder · QuickBooks Online & Xero Certified
             </p>
             <div className="mt-6 space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Samiha started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first — one where owners actually understand what their numbers are telling them.
+                Sam started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first — one where owners actually understand what their numbers are telling them.
               </p>
               <p>
                 Today, SDT works remotely with clients nationwide, combining certified QuickBooks Online and Xero expertise with personal, responsive service. Every engagement is hands-on: real conversations, clean books, and a partner who answers when you reach out.
@@ -52,10 +52,10 @@ function About() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <BadgeCheck size={16} className="text-[#3B5BFF]" /> QuickBooks Online Certified
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-[#2CA01C] text-white text-[10px] font-bold">qb</span> QuickBooks Online Certified
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <ShieldCheck size={16} className="text-[#3B5BFF]" /> Xero Certified
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-[#13B5EA] text-white text-[11px] font-bold">X</span> Xero Certified
               </span>
             </div>
           </div>

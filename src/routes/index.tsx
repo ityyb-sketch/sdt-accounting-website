@@ -36,7 +36,6 @@ import {
   CircleDollarSign,
   Settings2,
 } from "lucide-react";
-import { HeroScene } from "@/components/hero-scene";
 import { StatsStrip } from "@/components/stats-strip";
 import { Parallax } from "@/components/parallax";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -164,6 +163,12 @@ const faqs = [
   { q: "How do I get support?", a: "Email us anytime at info@sdtaccounting.com." },
 ];
 
+const clientNames = [
+  "Maple & Co.", "BrightPath Studio", "Harbor Logistics", "Verde Café",
+  "Northwind Realty", "PixelForge", "Lumen Health", "Cedar Consulting",
+  "Riverstone Group", "Atlas Fitness", "Bluebird Bakery", "Summit Trades",
+];
+
 function Home() {
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -218,23 +223,29 @@ function Home() {
               </p>
             </div>
 
-            <div className="reveal reveal-delay-2 relative">
-              <Parallax speed={-40}>
-                <div className="relative">
-                  <HeroScene />
-                  <div aria-hidden className="absolute -bottom-6 -left-6 hidden md:block">
-                    <div className="rounded-2xl bg-white/90 backdrop-blur border border-navy/10 shadow-card px-5 py-4 flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-sky-soft text-[#3B5BFF]">
-                        <BadgeCheck size={20} />
-                      </span>
-                      <div>
-                        <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Certified</div>
-                        <div className="text-sm font-bold text-navy">QuickBooks & Xero</div>
-                      </div>
-                    </div>
-                  </div>
+            <div className="reveal reveal-delay-2">
+              <form
+                action="https://formsubmit.co/info@sdtaccounting.com"
+                method="POST"
+                className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-elegant space-y-4"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://sdtaccounting.com/" />
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-gold">Get a callback</p>
+                  <h3 className="mt-1 text-xl md:text-2xl font-bold text-navy">Tell us about your business</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">We'll reply within one business day. Free consultation, no commitment.</p>
                 </div>
-              </Parallax>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input name="name" type="text" required placeholder="Name" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" />
+                  <input name="email" type="email" required placeholder="Email" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" />
+                </div>
+                <input name="phone" type="tel" placeholder="Phone (optional)" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" />
+                <textarea name="message" required rows={3} placeholder="How can we help with your books or taxes?" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30 resize-y" />
+                <button type="submit" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground shadow-elegant hover:shadow-lg transition-all">
+                  Request Callback <Send size={16} className="transition-transform group-hover:translate-x-0.5" />
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -433,14 +444,14 @@ function Home() {
           <div className="lg:col-span-7">
             <p className="reveal text-sm font-semibold uppercase tracking-wider text-gold">About</p>
             <h2 className="reveal reveal-delay-1 mt-3 text-3xl md:text-4xl font-bold text-navy">
-              Meet Samiha Syed, Founder
+              Meet Sam, Founder
             </h2>
             <div className="reveal reveal-delay-2 mt-6 flex items-center gap-5">
               <div className="relative h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-sky-soft to-white ring-1 ring-sky/30 shadow-card grid place-items-center">
-                <span className="font-display text-2xl font-bold text-navy">SS</span>
+                <span className="font-display text-2xl font-bold text-navy">S</span>
               </div>
               <div>
-                <div className="font-display text-lg font-bold text-navy">Samiha Syed</div>
+                <div className="font-display text-lg font-bold text-navy">Sam</div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">
                   Founder · QuickBooks Online & Xero Certified
                 </p>
@@ -448,7 +459,7 @@ function Home() {
             </div>
             <div className="reveal reveal-delay-2 mt-6 space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Samiha started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first — one where owners actually understand what their numbers are telling them.
+                Sam started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first — one where owners actually understand what their numbers are telling them.
               </p>
               <p>
                 Today, SDT works remotely with clients nationwide, combining certified QuickBooks Online and Xero expertise with personal, responsive service. Every engagement is hands-on: real conversations, clean books, and a partner who answers when you reach out.
@@ -456,10 +467,10 @@ function Home() {
             </div>
             <div className="reveal mt-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <BadgeCheck size={16} className="text-[#3B5BFF]" /> QuickBooks Online Certified
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-[#2CA01C] text-white text-[10px] font-bold">qb</span> QuickBooks Online Certified
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy">
-                <ShieldCheck size={16} className="text-[#3B5BFF]" /> Xero Certified
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-[#13B5EA] text-white text-[11px] font-bold">X</span> Xero Certified
               </span>
             </div>
           </div>
@@ -585,19 +596,53 @@ function Home() {
         </div>
       </section>
 
+      {/* ============== OUR CLIENTS (moving) ============== */}
+      <section className="py-16 md:py-20 border-y border-border bg-secondary/40 overflow-hidden">
+        <div className="container-page text-center">
+          <p className="reveal text-sm font-semibold uppercase tracking-wider text-gold">Our Clients</p>
+          <h2 className="reveal reveal-delay-1 mt-2 text-2xl md:text-3xl font-bold text-navy">
+            Businesses we're proud to support
+          </h2>
+        </div>
+        <div className="marquee-mask mt-10">
+          <div className="marquee-track gap-4">
+            {[...clientNames, ...clientNames].map((name, i) => (
+              <div
+                key={i}
+                className="flex w-64 shrink-0 items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-sm"
+              >
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-sky-soft text-sm font-bold text-[#3B5BFF]">
+                  {name.replace(/[^A-Za-z]/g, "").slice(0, 2).toUpperCase()}
+                </span>
+                <span className="font-display text-base font-semibold text-navy">{name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="marquee-mask mt-5">
+          <div className="marquee-track marquee-reverse gap-12 items-center px-6">
+            {[...clientNames, ...clientNames].map((name, i) => (
+              <span key={i} className="shrink-0 whitespace-nowrap font-display text-xl font-bold text-navy/25">
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trust badges */}
       <section className="container-page pb-8">
         <div className="reveal flex flex-wrap items-center justify-center gap-3 md:gap-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mr-2">Certified &amp; Accredited</span>
           {[
-            { icon: BadgeCheck, label: "QuickBooks Online Certified" },
-            { icon: ShieldCheck, label: "Xero Certified" },
+            { mark: "qb", bg: "#2CA01C", label: "QuickBooks Online Certified" },
+            { mark: "X", bg: "#13B5EA", label: "Xero Certified" },
           ].map((b) => (
             <span
               key={b.label}
-              className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-sky-soft/60 px-4 py-2 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-card hover:bg-sky-soft"
+              className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-white px-4 py-2 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-card"
             >
-              <b.icon size={16} className="text-[#3B5BFF]" />
+              <span className="grid h-5 w-5 place-items-center rounded-full text-white text-[10px] font-bold" style={{ backgroundColor: b.bg }}>{b.mark}</span>
               {b.label}
             </span>
           ))}
@@ -622,89 +667,6 @@ function Home() {
           <Parallax speed={40} className="absolute -bottom-20 -right-20">
             <div aria-hidden className="h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
           </Parallax>
-        </div>
-
-        {/* Callback form */}
-        <div className="mt-16 grid md:grid-cols-12 gap-10">
-          <div className="reveal md:col-span-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-gold">Get a callback</p>
-            <h3 className="mt-3 text-2xl md:text-3xl font-bold text-navy">Tell us about your business</h3>
-            <p className="mt-4 text-muted-foreground">
-              Send us a message and we'll get back to you within one business day.
-            </p>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Prefer to read first? Jump to our{" "}
-              <a href="#faq" className="text-navy font-semibold underline underline-offset-2 hover:text-navy/80">FAQs</a>.
-            </p>
-          </div>
-          <div className="reveal reveal-delay-1 md:col-span-7">
-            <form
-              action="https://formsubmit.co/info@sdtaccounting.com"
-              method="POST"
-              className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-card space-y-5"
-            >
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://sdtaccounting.com/" />
-
-              <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-navy mb-2">Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30"
-                    placeholder="Jane Smith"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-navy mb-2">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30"
-                    placeholder="you@business.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-2">
-                  Phone <span className="font-normal text-muted-foreground">(optional)</span>
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-navy mb-2">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30 resize-y"
-                  placeholder="Tell us a little about your business and what you're looking for…"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="group inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground shadow-elegant hover:shadow-lg transition-all"
-              >
-                Request Callback
-                <Send size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </button>
-            </form>
-          </div>
         </div>
       </section>
     </>
