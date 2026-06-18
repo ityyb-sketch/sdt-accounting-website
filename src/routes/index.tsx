@@ -192,8 +192,7 @@ function Home() {
       {/* ============== HERO ============== */}
       <section id="top" className="gradient-hero relative overflow-hidden">
         <div className="container-page py-20 md:py-28 relative">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-10 items-center">
-            <div>
+          <div className="max-w-3xl mx-auto text-center">
               <span className="reveal inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-navy">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted Accounting Partner
               </span>
@@ -207,10 +206,10 @@ function Home() {
                   </span>
                 </span>
               </h1>
-              <p className="reveal reveal-delay-2 mt-6 text-lg text-muted-foreground max-w-xl">
+              <p className="reveal reveal-delay-2 mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
                 Experience peace of mind with expert bookkeeping and tax preparation. We simplify the financial process so you stay compliant and focused on growing your business.
               </p>
-              <div className="reveal reveal-delay-3 mt-9 flex flex-wrap gap-4">
+              <div className="reveal reveal-delay-3 mt-9 flex flex-wrap gap-4 justify-center">
                 <a href="#contact" className="group inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground shadow-elegant hover:shadow-lg transition-all">
                   Get Started <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
                 </a>
@@ -222,32 +221,6 @@ function Home() {
                 Free consultation · No contracts · No commitment
               </p>
             </div>
-
-            <div className="reveal reveal-delay-2">
-              <form
-                action="https://formsubmit.co/info@sdtaccounting.com"
-                method="POST"
-                className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-elegant space-y-4"
-              >
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://sdtaccounting.com/" />
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider text-gold">Get a callback</p>
-                  <h3 className="mt-1 text-xl md:text-2xl font-bold text-navy">Tell us about your business</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">We'll reply within one business day. Free consultation, no commitment.</p>
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <input name="name" type="text" required placeholder="Name" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" />
-                  <input name="email" type="email" required placeholder="Email" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" />
-                </div>
-                <input name="phone" type="tel" placeholder="Phone (optional)" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" />
-                <textarea name="message" required rows={3} placeholder="How can we help with your books or taxes?" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30 resize-y" />
-                <button type="submit" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground shadow-elegant hover:shadow-lg transition-all">
-                  Request Callback <Send size={16} className="transition-transform group-hover:translate-x-0.5" />
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -667,6 +640,47 @@ function Home() {
           <Parallax speed={40} className="absolute -bottom-20 -right-20">
             <div aria-hidden className="h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
           </Parallax>
+        </div>
+
+        <div className="mt-16 grid md:grid-cols-12 gap-10">
+          <div className="reveal md:col-span-5">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">Get a callback</p>
+            <h3 className="mt-3 text-2xl md:text-3xl font-bold text-navy">Tell us about your business</h3>
+            <p className="mt-4 text-muted-foreground">
+              Send us a message and we'll get back to you within one business day.
+            </p>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Prefer to read first? Jump to our{" "}
+              <a href="#faq" className="text-navy font-semibold underline underline-offset-2 hover:text-navy/80">FAQs</a>.
+            </p>
+          </div>
+          <div className="reveal reveal-delay-1 md:col-span-7">
+            <form action="https://formsubmit.co/info@sdtaccounting.com" method="POST" className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-card space-y-5">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://sdtaccounting.com/" />
+              <div className="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-navy mb-2">Name</label>
+                  <input id="name" name="name" type="text" required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" placeholder="Jane Smith" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-navy mb-2">Email</label>
+                  <input id="email" name="email" type="email" required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" placeholder="you@business.com" />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-2">Phone <span className="font-normal text-muted-foreground">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30" placeholder="(555) 123-4567" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-navy mb-2">Message</label>
+                <textarea id="message" name="message" required rows={5} className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-navy placeholder:text-muted-foreground focus:border-sky focus:outline-none focus:ring-2 focus:ring-sky/30 resize-y" placeholder="Tell us a little about your business and what you're looking for…" />
+              </div>
+              <button type="submit" className="group inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground shadow-elegant hover:shadow-lg transition-all">
+                Request Callback <Send size={16} className="transition-transform group-hover:translate-x-0.5" />
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </>
