@@ -245,3 +245,14 @@ html.lenis, html.lenis body { height: auto; }
   .kinetic-accent { animation: none !important; }
   html { scroll-behavior: auto; }
 }
+
+
+@keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.marquee-mask { overflow: hidden; width: 100%; }
+.marquee-track { display: flex; width: max-content; animation: marquee-left 45s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+.marquee-reverse { animation: marquee-right 55s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; }
+}
