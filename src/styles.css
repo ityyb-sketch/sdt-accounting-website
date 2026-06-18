@@ -96,7 +96,7 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-stopped { overflow: hidden; }
 
 /* Kinetic headline line-reveal */
-.kinetic-line { display: block; overflow: hidden; }
+.kinetic-line { display: block; overflow: hidden; padding-bottom: 0.16em; margin-bottom: -0.16em; }
 .kinetic-line > span {
   display: inline-block;
   transform: translateY(110%);
