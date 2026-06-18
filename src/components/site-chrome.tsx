@@ -50,9 +50,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between">
-        <NavAnchor hash="top" className="flex items-center gap-2 font-display text-lg font-semibold text-navy">
+        <NavAnchor hash="top" className="flex items-center gap-2.5">
           <img src="/logo-mark.png" alt="SDT Accounting logo" className="h-9 w-9" />
-          SDT Accounting
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-lg font-semibold text-navy">SDT Accounting</span>
+            <span className="text-[11px] font-medium text-muted-foreground">Sam’s Daybooks &amp; Tax</span>
+          </span>
         </NavAnchor>
         <nav className="hidden md:flex items-center gap-7">
           <NavAnchor hash="top" className={linkCls}>Home</NavAnchor>
