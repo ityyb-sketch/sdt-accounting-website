@@ -44,37 +44,37 @@
   --radius: 0.875rem;
   /* Modern Teal palette */
   --background: #FFFFFF;
-  --foreground: #042F2A;
+  --foreground: #1B1B1D;
   --card: #FFFFFF;
-  --card-foreground: #042F2A;
+  --card-foreground: #1B1B1D;
   --popover: #FFFFFF;
-  --popover-foreground: #042F2A;
+  --popover-foreground: #1B1B1D;
 
   /* "navy" token = dark teal-black text */
-  --navy: #042F2A;
+  --navy: #1B1B1D;
   --navy-foreground: #FFFFFF;
 
   /* "gold" token = primary teal accent */
-  --gold: #0D9488;
+  --gold: #3B5BFF;
   --gold-foreground: #FFFFFF;
 
   /* "sky" tokens = teal accent + light teal tint */
-  --sky: #0D9488;
-  --sky-soft: #E1F5EE;
+  --sky: #3B5BFF;
+  --sky-soft: #E8ECFF;
 
-  --primary: #0D9488;
+  --primary: #3B5BFF;
   --primary-foreground: #FFFFFF;
-  --secondary: #E7F5F2;
-  --secondary-foreground: #042F2A;
-  --muted: #E7F5F2;
-  --muted-foreground: #4D7A72;
-  --accent: #0D9488;
+  --secondary: #EEF2FF;
+  --secondary-foreground: #1B1B1D;
+  --muted: #EEF2FF;
+  --muted-foreground: #5B6679;
+  --accent: #3B5BFF;
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #FFFFFF;
-  --border: #CFE9E2;
-  --input: #CFE9E2;
-  --ring: #0D9488;
+  --border: #DCE3F5;
+  --input: #DCE3F5;
+  --ring: #3B5BFF;
 }
 
 @layer base {
@@ -110,7 +110,7 @@ html.lenis, html.lenis body { height: auto; }
   to { transform: translateY(0); opacity: 1; }
 }
 .kinetic-accent {
-  background: linear-gradient(120deg, #0D9488 0%, #0F766E 60%, #0D9488 100%);
+  background: linear-gradient(120deg, #3B5BFF 0%, #2F49CC 60%, #3B5BFF 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -138,8 +138,8 @@ html.lenis, html.lenis body { height: auto; }
 
 @utility gradient-navy {
   background:
-    radial-gradient(50% 70% at 100% 0%, color-mix(in oklab, #0F766E 60%, transparent), transparent 60%),
-    linear-gradient(135deg, #0D9488, #042F2A);
+    radial-gradient(50% 70% at 100% 0%, color-mix(in oklab, #2F49CC 60%, transparent), transparent 60%),
+    linear-gradient(135deg, #3B5BFF, #1B1B1D);
 }
 
 @utility surface-soft {
