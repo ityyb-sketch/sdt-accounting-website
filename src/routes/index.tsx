@@ -548,52 +548,23 @@ function Home() {
         </div>
       </section>
 
-      {/* Certified + software we work with (scrolling) */}
-      <section className="reveal py-10 overflow-hidden">
-        {(() => {
-          const certs = [
+      {/* Certified & Accredited */}
+      <section className="reveal container-page pb-12 pt-2">
+        <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">Certified &amp; Accredited</p>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          {[
             { mark: "qb", bg: "#2CA01C", label: "QuickBooks Online Certified" },
             { mark: "X", bg: "#13B5EA", label: "Xero Certified" },
-          ];
-          const software = [
-            { mark: "fb", bg: "#0075DD", name: "FreshBooks" },
-            { mark: "z", bg: "#E42527", name: "Zoho Books" },
-            { mark: "w", bg: "#1F9CE4", name: "Wave Accounting" },
-            { mark: "s", bg: "#00B760", name: "Sage" },
-            { mark: "O", bg: "#C74634", name: "Oracle NetSuite" },
-            { mark: "T", bg: "#C8102E", name: "TallyPrime" },
-            { mark: "o", bg: "#714B67", name: "Odoo" },
-            { mark: "D", bg: "#0B53CE", name: "Microsoft Dynamics 365" },
-          ];
-          const chip = (
-            b: { mark: string; bg: string; label?: string; name?: string },
-            i: number,
-          ) => (
+          ].map((b) => (
             <span
-              key={i}
-              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm font-semibold text-navy shadow-sm whitespace-nowrap"
+              key={b.label}
+              className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-white px-4 py-2 text-sm font-semibold text-navy shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-card"
             >
               <span className="grid h-5 w-5 place-items-center rounded-full text-white text-[10px] font-bold" style={{ backgroundColor: b.bg }}>{b.mark}</span>
-              {b.label ?? b.name}
+              {b.label}
             </span>
-          );
-          return (
-            <>
-              <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">Certified &amp; Accredited</p>
-              <div className="marquee-mask mt-5">
-                <div className="marquee-track gap-4">
-                  {[...certs, ...certs, ...certs, ...certs, ...certs, ...certs].map(chip)}
-                </div>
-              </div>
-              <p className="mt-10 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">Software we work with</p>
-              <div className="marquee-mask mt-5">
-                <div className="marquee-track marquee-reverse gap-4">
-                  {[...software, ...software].map(chip)}
-                </div>
-              </div>
-            </>
-          );
-        })()}
+          ))}
+        </div>
       </section>
 
       {/* ============== FINAL CTA / CONTACT ============== */}
