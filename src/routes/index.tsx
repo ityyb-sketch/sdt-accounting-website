@@ -602,26 +602,21 @@ function Home() {
             {[...clients, ...clients].map((c, i) => (
               <div
                 key={i}
-                className="grid h-28 w-56 shrink-0 place-items-center rounded-2xl border border-border p-5 shadow-sm"
+                className="h-24 w-52 shrink-0 overflow-hidden rounded-2xl border border-border shadow-sm"
                 style={{ backgroundColor: c.card }}
                 title={c.name}
               >
-                <img src={c.src} alt={c.name} loading="lazy" className="max-h-full max-w-full object-contain" />
+                <img src={c.src} alt={c.name} loading="lazy" className="h-full w-full object-cover" />
               </div>
             ))}
           </div>
         </div>
-        <div className="marquee-mask mt-5">
-          <div className="marquee-track marquee-reverse gap-5 items-center">
+        <div className="marquee-mask mt-6">
+          <div className="marquee-track marquee-reverse items-center gap-10 px-6">
             {[...clients, ...clients].map((c, i) => (
-              <div
-                key={i}
-                className="grid h-20 w-44 shrink-0 place-items-center rounded-xl border border-border p-4 shadow-sm"
-                style={{ backgroundColor: c.card }}
-                title={c.name}
-              >
-                <img src={c.src} alt={c.name} loading="lazy" className="max-h-full max-w-full object-contain" />
-              </div>
+              <span key={i} className="shrink-0 whitespace-nowrap font-display text-base md:text-lg font-semibold text-navy/55">
+                {c.name}
+              </span>
             ))}
           </div>
         </div>
