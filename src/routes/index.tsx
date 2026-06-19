@@ -17,7 +17,6 @@ import {
   Stethoscope,
   HeartHandshake,
   Check,
-  X as XIcon,
   AlertTriangle,
   Layers,
   ClipboardCheck,
@@ -36,7 +35,6 @@ import {
   CircleDollarSign,
   Settings2,
 } from "lucide-react";
-import { StatsStrip } from "@/components/stats-strip";
 import { Parallax } from "@/components/parallax";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -92,22 +90,6 @@ const pains = [
   { icon: AlertTriangle, title: "Messy or behind books", body: "Receipts piling up, categories out of whack, and a quarter-end scramble every time." },
   { icon: Layers, title: "Juggling too many tools", body: "QuickBooks here, spreadsheets there, bank exports somewhere else — and nothing tying out." },
   { icon: ClipboardCheck, title: "Compliance worry", body: "Missed deadlines, surprise tax bills, and the nagging feeling you might be missing something." },
-];
-
-const cons = [
-  "Generic templates that don't fit your business",
-  "Slow replies when you actually need answers",
-  "Surprise bills and hidden hourly add-ons",
-  "Books that look fine but don't tie out",
-  "No real strategy — just data entry",
-];
-
-const pros = [
-  "QuickBooks Online & Xero Certified",
-  "Fully remote — serving clients nationwide",
-  "Personal, responsive service from a real person",
-  "Clear monthly reports you actually understand",
-  "No long contracts — month to month, always",
 ];
 
 const plans = [
@@ -244,9 +226,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Stats strip */}
-      <StatsStrip />
-
       {/* ============== PROBLEM ============== */}
       <section className="container-page py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-12 items-center">
@@ -281,59 +260,6 @@ function Home() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============== COMPARISON ============== */}
-      <section className="bg-muted/40 border-y border-border">
-        <div className="container-page py-20 md:py-28">
-          <div className="reveal max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-gold">The difference</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">A simpler way to handle your books.</h2>
-            <p className="mt-4 text-muted-foreground">
-              See how working with SDT compares to going it alone or hiring a generic bookkeeper.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="reveal reveal-delay-1 rounded-2xl border border-border bg-card p-8">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-muted text-muted-foreground">
-                  <XIcon size={20} />
-                </span>
-                <h3 className="text-xl font-bold text-navy">DIY / Generic Bookkeeper</h3>
-              </div>
-              <ul className="mt-6 space-y-3">
-                {cons.map((c) => (
-                  <li key={c} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
-                      <XIcon size={12} strokeWidth={3} />
-                    </span>
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="reveal reveal-delay-2 rounded-2xl border-2 border-[#3B5BFF] bg-gradient-to-br from-[#E8ECFF] to-white p-8 shadow-elegant">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#3B5BFF] text-white">
-                  <Check size={20} strokeWidth={3} />
-                </span>
-                <h3 className="text-xl font-bold text-navy">SDT Accounting</h3>
-              </div>
-              <ul className="mt-6 space-y-3">
-                {pros.map((c) => (
-                  <li key={c} className="flex items-start gap-3 text-sm text-navy/80">
-                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3B5BFF] text-white">
-                      <Check size={12} strokeWidth={3} />
-                    </span>
-                    {c}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
