@@ -4,10 +4,10 @@ import { ArrowRight, BadgeCheck, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About SDT — SDT Accounting" },
+      { title: "About SDT | SDT Accounting" },
       { name: "description", content: "Meet Sam, founder of SDT Accounting. QuickBooks Online & Xero Certified, serving clients nationwide, fully remote." },
       { property: "og:title", content: "About SDT Accounting" },
-      { property: "og:description", content: "Founded by Sam — certified, remote-first bookkeeping for small businesses across the country." },
+      { property: "og:description", content: "Founded by Sam, certified, remote-first bookkeeping for small businesses across the country." },
     ],
   }),
   component: About,
@@ -44,7 +44,7 @@ function About() {
             </p>
             <div className="mt-6 space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Sam started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first — one where owners actually understand what their numbers are telling them.
+                Sam started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first, one where owners actually understand what their numbers are telling them.
               </p>
               <p>
                 Today, SDT works remotely with clients nationwide, combining certified QuickBooks Online and Xero expertise with personal, responsive service. Every engagement is hands-on: real conversations, clean books, and a partner who answers when you reach out.
@@ -82,7 +82,7 @@ function About() {
         <div className="gradient-navy relative overflow-hidden rounded-3xl px-8 md:px-16 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-navy-foreground">Let's get acquainted.</h2>
-            <p className="mt-2 text-navy-foreground/70">Free initial consultation — no pressure, just clarity.</p>
+            <p className="mt-2 text-navy-foreground/70">Free initial consultation, no pressure, just clarity.</p>
           </div>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all">
             Get in Touch <ArrowRight size={16} />

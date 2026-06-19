@@ -4,10 +4,10 @@ import { Mail, MapPin, Clock, ArrowRight, Send } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — SDT Accounting" },
-      { name: "description", content: "Get in touch with SDT Accounting. Email us at info@sdtaccounting.com or request a callback — we serve clients nationwide, fully remote." },
+      { title: "Contact | SDT Accounting" },
+      { name: "description", content: "Get in touch with SDT Accounting. Email us at info@sdtaccounting.com or request a callback, we serve clients nationwide, fully remote." },
       { property: "og:title", content: "Contact SDT Accounting" },
-      { property: "og:description", content: "Email info@sdtaccounting.com or request a callback — fully remote, nationwide." },
+      { property: "og:description", content: "Email info@sdtaccounting.com or request a callback, fully remote, nationwide." },
     ],
   }),
   component: Contact,

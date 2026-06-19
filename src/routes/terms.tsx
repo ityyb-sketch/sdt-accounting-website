@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — SDT Accounting" },
+      { title: "Terms of Service | SDT Accounting" },
       { name: "description", content: "Terms governing your use of SDT Accounting's services and website." },
-      { property: "og:title", content: "Terms of Service — SDT Accounting" },
+      { property: "og:title", content: "Terms of Service | SDT Accounting" },
       { property: "og:description", content: "Scope of services, limitations, and your responsibilities as a client." },
     ],
   }),
@@ -49,7 +49,7 @@ function Terms() {
           <div>
             <h2 className="text-2xl font-bold text-navy">No Guarantee of Specific Tax Outcomes</h2>
             <p className="mt-3">
-              We use professional care and current knowledge of applicable rules to prepare your books and returns, but we cannot and do not guarantee any specific tax outcome — including the size of a refund, a particular liability, or any particular tax position being accepted by a taxing authority. Tax laws change and are subject to interpretation; outcomes ultimately depend on the facts of your situation and the decisions of regulatory bodies.
+              We use professional care and current knowledge of applicable rules to prepare your books and returns, but we cannot and do not guarantee any specific tax outcome, including the size of a refund, a particular liability, or any particular tax position being accepted by a taxing authority. Tax laws change and are subject to interpretation; outcomes ultimately depend on the facts of your situation and the decisions of regulatory bodies.
             </p>
           </div>
 

@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQs — SDT Accounting" },
+      { title: "FAQs | SDT Accounting" },
       { name: "description", content: "Frequently asked questions about SDT Accounting's bookkeeping, tax preparation, and remote services." },
       { property: "og:title", content: "SDT Accounting FAQs" },
       { property: "og:description", content: "Answers to common questions about our services, fees, and remote process." },
@@ -17,8 +17,8 @@ export const Route = createFileRoute("/faq")({
 const faqs = [
   { q: "What services do you provide?", a: "We provide bookkeeping, tax preparation, accounting, and financial consulting." },
   { q: "How do I schedule a consultation?", a: "Email us at info@sdtaccounting.com and we'll respond within one business day." },
-  { q: "What are your fees?", a: "Pricing is tailored to your needs — contact us for a free quote." },
-  { q: "Do you offer remote services?", a: "Yes — we work with clients nationwide, fully remote." },
+  { q: "What are your fees?", a: "Pricing is tailored to your needs, contact us for a free quote." },
+  { q: "Do you offer remote services?", a: "Yes, we work with clients nationwide, fully remote." },
   { q: "How do I get support?", a: "Email us anytime at info@sdtaccounting.com." },
 ];
 
@@ -30,7 +30,7 @@ function Faq() {
           <p className="reveal text-sm font-semibold uppercase tracking-wider text-gold">FAQ</p>
           <h1 className="reveal reveal-delay-1 mt-3 text-4xl md:text-6xl font-bold text-navy max-w-3xl">Frequently asked questions</h1>
           <p className="reveal reveal-delay-2 mt-5 text-lg text-muted-foreground max-w-2xl">
-            Can't find what you're looking for? Email us — we're happy to help.
+            Can't find what you're looking for? Email us, we're happy to help.
           </p>
         </div>
       </section>

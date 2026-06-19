@@ -4,9 +4,9 @@ import { ArrowRight, Check, Sparkles, Settings, RefreshCcw, MessageCircle } from
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — SDT Accounting" },
+      { title: "Pricing | SDT Accounting" },
       { name: "description", content: "Transparent monthly bookkeeping packages and one-time services. Fully remote, nationwide." },
-      { property: "og:title", content: "Pricing — SDT Accounting" },
+      { property: "og:title", content: "Pricing | SDT Accounting" },
       { property: "og:description", content: "Simple monthly packages and one-time services tailored to your business." },
     ],
   }),
@@ -69,7 +69,7 @@ function Pricing() {
             Simple, transparent packages.
           </h1>
           <p className="reveal reveal-delay-2 mt-5 text-lg text-muted-foreground max-w-2xl">
-            Choose a monthly plan that fits where your business is today — and grow into the next one when you're ready.
+            Choose a monthly plan that fits where your business is today, and grow into the next one when you're ready.
           </p>
         </div>
       </section>
@@ -164,7 +164,7 @@ function Pricing() {
         <div className="gradient-navy relative overflow-hidden rounded-3xl px-8 md:px-16 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-navy-foreground">Not sure which plan fits?</h2>
-            <p className="mt-2 text-navy-foreground/70">Start with a free consultation — we'll recommend the right path.</p>
+            <p className="mt-2 text-navy-foreground/70">Start with a free consultation, we'll recommend the right path.</p>
           </div>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all">
             Book Free Consultation <ArrowRight size={16} />

@@ -4,9 +4,9 @@ import { ArrowRight, BarChart3, Calculator, BookOpen, LineChart, Award, Heart, W
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — SDT Accounting" },
+      { title: "Services | SDT Accounting" },
       { name: "description", content: "Accounting, tax preparation, bookkeeping, and financial consulting tailored to your needs. Fully remote, nationwide." },
-      { property: "og:title", content: "Services — SDT Accounting" },
+      { property: "og:title", content: "Services | SDT Accounting" },
       { property: "og:description", content: "Personalized accounting, tax, and bookkeeping services to simplify your financial life." },
     ],
   }),
@@ -14,15 +14,15 @@ export const Route = createFileRoute("/services")({
 });
 
 const details = [
-  { icon: BarChart3, title: "Accounting Services", body: "Clear financial records, accurate statements, and full compliance — with tailored solutions that grow alongside your business." },
+  { icon: BarChart3, title: "Accounting Services", body: "Clear financial records, accurate statements, and full compliance, with tailored solutions that grow alongside your business." },
   { icon: Calculator, title: "Tax Preparation", body: "Every deduction you deserve. We stay compliant with current tax laws to maximize refunds and minimize liabilities." },
-  { icon: BookOpen, title: "Bookkeeping", body: "Daily transactions, invoices, and accurate financial statements — kept current so you always know where you stand." },
+  { icon: BookOpen, title: "Bookkeeping", body: "Daily transactions, invoices, and accurate financial statements, kept current so you always know where you stand." },
   { icon: LineChart, title: "Financial Consulting", body: "Strategic insights for complex financial decisions and confident future planning." },
 ];
 
 const reasons = [
   { icon: Award, title: "Expert Guidance", body: "Years of experience across diverse industries and tax situations." },
-  { icon: Heart, title: "Personalized Solutions", body: "Tailored to your goals — never one-size-fits-all." },
+  { icon: Heart, title: "Personalized Solutions", body: "Tailored to your goals, never one-size-fits-all." },
   { icon: Wallet, title: "Affordable Pricing", body: "Transparent rates designed to deliver real value." },
 ];
 

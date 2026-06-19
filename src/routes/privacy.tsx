@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — SDT Accounting" },
+      { title: "Privacy Policy | SDT Accounting" },
       { name: "description", content: "How SDT Accounting collects, uses, and protects your information." },
-      { property: "og:title", content: "Privacy Policy — SDT Accounting" },
+      { property: "og:title", content: "Privacy Policy | SDT Accounting" },
       { property: "og:description", content: "Our commitment to confidentiality and responsible data handling." },
     ],
   }),
@@ -35,7 +35,7 @@ function Privacy() {
           <div>
             <h2 className="text-2xl font-bold text-navy">Information We Collect</h2>
             <p className="mt-3">
-              We collect information you provide directly — such as your name, email, phone number, business details, and any financial records you share so we can perform bookkeeping, tax preparation, or consulting services. We may also receive limited technical information (such as IP address and browser type) when you visit this website.
+              We collect information you provide directly, such as your name, email, phone number, business details, and any financial records you share so we can perform bookkeeping, tax preparation, or consulting services. We may also receive limited technical information (such as IP address and browser type) when you visit this website.
             </p>
           </div>
 

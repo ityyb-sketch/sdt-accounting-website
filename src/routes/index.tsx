@@ -41,9 +41,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SDT Accounting — Your trusted partner for expert accounting" },
+      { title: "SDT Accounting | Your trusted partner for expert accounting" },
       { name: "description", content: "Expert bookkeeping and tax preparation, fully remote nationwide. QuickBooks Online & Xero certified. Free consultation, no contracts." },
-      { property: "og:title", content: "SDT Accounting — Expert Accounting & Tax" },
+      { property: "og:title", content: "SDT Accounting | Expert Accounting & Tax" },
       { property: "og:description", content: "Reliable bookkeeping and tax preparation, fully remote nationwide." },
     ],
   }),
@@ -58,7 +58,7 @@ const PHOTOS = {
 };
 
 const services = [
-  { icon: BarChart3, title: "Accounting Services", body: "Clear financial records, accurate statements, and full compliance — tailored solutions that grow with your business." },
+  { icon: BarChart3, title: "Accounting Services", body: "Clear financial records, accurate statements, and full compliance, tailored solutions that grow with your business." },
   { icon: Calculator, title: "Tax Preparation", body: "Every deduction you deserve. We stay current with tax law to maximize refunds and minimize liabilities." },
   { icon: BookOpen, title: "Bookkeeping", body: "Daily transactions, invoices, and statements kept current so you always know where you stand." },
   { icon: LineChart, title: "Financial Consulting", body: "Strategic insights for complex decisions and confident future planning." },
@@ -88,7 +88,7 @@ const industries = [
 
 const pains = [
   { icon: AlertTriangle, title: "Messy or behind books", body: "Receipts piling up, categories out of whack, and a quarter-end scramble every time." },
-  { icon: Layers, title: "Juggling too many tools", body: "QuickBooks here, spreadsheets there, bank exports somewhere else — and nothing tying out." },
+  { icon: Layers, title: "Juggling too many tools", body: "QuickBooks here, spreadsheets there, bank exports somewhere else, and nothing tying out." },
   { icon: ClipboardCheck, title: "Compliance worry", body: "Missed deadlines, surprise tax bills, and the nagging feeling you might be missing something." },
 ];
 
@@ -140,8 +140,8 @@ const oneTime = [
 const faqs = [
   { q: "What services do you provide?", a: "We provide bookkeeping, tax preparation, accounting, and financial consulting." },
   { q: "How do I schedule a consultation?", a: "Email us at info@sdtaccounting.com and we'll respond within one business day." },
-  { q: "What are your fees?", a: "Pricing is tailored to your needs — contact us for a free quote." },
-  { q: "Do you offer remote services?", a: "Yes — we work with clients nationwide, fully remote." },
+  { q: "What are your fees?", a: "Pricing is tailored to your needs, contact us for a free quote." },
+  { q: "Do you offer remote services?", a: "Yes, we work with clients nationwide, fully remote." },
   { q: "How do I get support?", a: "Email us anytime at info@sdtaccounting.com." },
 ];
 
@@ -243,7 +243,7 @@ function Home() {
               Bookkeeping shouldn't keep you up at night.
             </h2>
             <p className="reveal reveal-delay-2 mt-4 text-muted-foreground max-w-xl">
-              You started your business to do what you love — not chase receipts. Here's where most owners get stuck:
+              You started your business to do what you love, not chase receipts. Here's where most owners get stuck:
             </p>
             <div className="mt-8 grid gap-4">
               {pains.map((p, i) => (
@@ -274,7 +274,7 @@ function Home() {
               Services built around your business
             </h2>
             <p className="reveal reveal-delay-2 mt-4 text-muted-foreground">
-              Personalized bookkeeping and tax preparation to simplify your financial life — handled by a real, certified bookkeeper.
+              Personalized bookkeeping and tax preparation to simplify your financial life, handled by a real, certified bookkeeper.
             </p>
             <div className="reveal reveal-delay-2 mt-8">
               <img
@@ -378,7 +378,7 @@ function Home() {
             </div>
             <div className="reveal reveal-delay-2 mt-6 space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Sam started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first — one where owners actually understand what their numbers are telling them.
+                Sam started SDT Accounting out of a genuine passion for helping small business owners make sense of their numbers. After years of watching founders struggle with messy books, missed deductions, and last-minute tax stress, she set out to build a practice that puts clarity and care first, one where owners actually understand what their numbers are telling them.
               </p>
               <p>
                 Today, SDT works remotely with clients nationwide, combining certified QuickBooks Online and Xero expertise with personal, responsive service. Every engagement is hands-on: real conversations, clean books, and a partner who answers when you reach out.
@@ -403,7 +403,7 @@ function Home() {
             <p className="text-sm font-semibold uppercase tracking-wider text-gold">Pricing</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy">Simple, transparent packages.</h2>
             <p className="mt-4 text-muted-foreground">
-              Choose a monthly plan that fits where your business is today — and grow into the next one when you're ready.
+              Choose a monthly plan that fits where your business is today, and grow into the next one when you're ready.
             </p>
           </div>
 
@@ -572,7 +572,7 @@ function Home() {
         <div className="gradient-navy relative overflow-hidden rounded-3xl px-8 md:px-16 py-16 md:py-20 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-navy-foreground">Ready to simplify your finances?</h2>
           <p className="mt-4 text-navy-foreground/70 max-w-xl mx-auto">
-            Let's talk about how we can support your goals — wherever you are.
+            Let's talk about how we can support your goals, wherever you are.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href="mailto:info@sdtaccounting.com" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground hover:brightness-105 transition-all shadow-elegant">
