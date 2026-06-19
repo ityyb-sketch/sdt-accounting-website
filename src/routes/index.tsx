@@ -163,10 +163,17 @@ const faqs = [
   { q: "How do I get support?", a: "Email us anytime at info@sdtaccounting.com." },
 ];
 
-const clientNames = [
-  "Maple & Co.", "BrightPath Studio", "Harbor Logistics", "Verde Café",
-  "Northwind Realty", "PixelForge", "Lumen Health", "Cedar Consulting",
-  "Riverstone Group", "Atlas Fitness", "Bluebird Bakery", "Summit Trades",
+const clients = [
+  { name: "Capital City Cargo", src: "/clients/capital-city-cargo.png", card: "#FFFFFF" },
+  { name: "The Econic Company", src: "/clients/econic.png", card: "#FFFFFF" },
+  { name: "Top Notch Masonry & Restoration", src: "/clients/top-notch.png", card: "#FFFFFF" },
+  { name: "Marketsz", src: "/clients/marketsz.png", card: "#FFFFFF" },
+  { name: "Timberwolf Studios", src: "/clients/timberwolf.png", card: "#11100B" },
+  { name: "Akemi", src: "/clients/akemi.png", card: "#FFFFFF" },
+  { name: "Accounting Expert Group", src: "/clients/accounting-expert-group.png", card: "#FFFFFF" },
+  { name: "Sugarleaf Insurance Services", src: "/clients/sugarleaf.png", card: "#FFFFFF" },
+  { name: "Expatsi", src: "/clients/expatsi.png", card: "#F6F6F6" },
+  { name: "Digz Media Group", src: "/clients/digz-media.png", card: "#000000" },
 ];
 
 function Home() {
@@ -591,26 +598,30 @@ function Home() {
           </h2>
         </div>
         <div className="marquee-mask mt-10">
-          <div className="marquee-track gap-4">
-            {[...clientNames, ...clientNames].map((name, i) => (
+          <div className="marquee-track gap-5">
+            {[...clients, ...clients].map((c, i) => (
               <div
                 key={i}
-                className="flex w-64 shrink-0 items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-sm"
+                className="grid h-28 w-56 shrink-0 place-items-center rounded-2xl border border-border p-5 shadow-sm"
+                style={{ backgroundColor: c.card }}
+                title={c.name}
               >
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-sky-soft text-sm font-bold text-[#3B5BFF]">
-                  {name.replace(/[^A-Za-z]/g, "").slice(0, 2).toUpperCase()}
-                </span>
-                <span className="font-display text-base font-semibold text-navy">{name}</span>
+                <img src={c.src} alt={c.name} loading="lazy" className="max-h-full max-w-full object-contain" />
               </div>
             ))}
           </div>
         </div>
         <div className="marquee-mask mt-5">
-          <div className="marquee-track marquee-reverse gap-12 items-center px-6">
-            {[...clientNames, ...clientNames].map((name, i) => (
-              <span key={i} className="shrink-0 whitespace-nowrap font-display text-xl font-bold text-navy/25">
-                {name}
-              </span>
+          <div className="marquee-track marquee-reverse gap-5 items-center">
+            {[...clients, ...clients].map((c, i) => (
+              <div
+                key={i}
+                className="grid h-20 w-44 shrink-0 place-items-center rounded-xl border border-border p-4 shadow-sm"
+                style={{ backgroundColor: c.card }}
+                title={c.name}
+              >
+                <img src={c.src} alt={c.name} loading="lazy" className="max-h-full max-w-full object-contain" />
+              </div>
             ))}
           </div>
         </div>
